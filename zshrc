@@ -8,6 +8,10 @@ alias lla='ls -lA'
 alias clip='xsel -ib'
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
 
+# Neovim
+alias vi='nvim'
+alias vim='nvim'
+
 # Tmuxp
 alias tp='tmuxp load tmuxp'
 
@@ -26,9 +30,8 @@ function md() {
   mkdir -p "$@" && cd "$1";
 }
 function vim-plug() {
-  mkdir -p ~/.vim/autoload
-  curl --insecure -fLo ~/.vim/autoload/plug.vim \
-    https://raw.github.com/junegunn/vim-plug/master/plug.vim
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 # Execute before showing prompt
