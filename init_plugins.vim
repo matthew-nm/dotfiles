@@ -23,8 +23,11 @@ Plug 'tomtom/tcomment_vim'  " comment/uncomment lines easily
 Plug 'vim-scripts/YankRing.vim'  " show yank history
 Plug 'jiangmiao/auto-pairs'  " automatically insert paired characters, ie. () [] {}
 Plug 'tpope/vim-characterize'  " more character info on 'ga'
-Plug 'dense-analysis/ale'  " linter
 "Plug 'konfekt/fastfold'  " speed up folding
+
+" Themes
+Plug 'Dru89/vim-adventurous'
+Plug 'vim-airline/vim-airline-themes'
 
 " Files
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }  " file explorer
@@ -35,30 +38,37 @@ Plug 'junegunn/fzf.vim'  " fzf plugin
 Plug 'jremmen/vim-ripgrep'  " stupid-fast grep'ing
 Plug 'stefandtw/quickfix-reflector.vim'  " changes to quickfix are saved to files
 
-" Completion
+" Completion / Linting
+Plug 'dense-analysis/ale'  " linter
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  " completion engine
 Plug 'ervandew/supertab'  " use <TAB> to select completion option
-
-" Python
-Plug 'tmhedberg/SimpylFold'  " enable folding python code
 
 " Git
 Plug 'airblade/vim-gitgutter'  " show the change status of a line
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }  " show git status in nerdtree
 
-" Themes
-Plug 'Dru89/vim-adventurous'
-Plug 'vim-airline/vim-airline-themes'
-
-" Syntax
-Plug 'vim-python/python-syntax'
-Plug 'plasticboy/vim-markdown'
-Plug 'sirosen/vim-rockstar'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'magicalbanana/sql-syntax-vim'
-
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'  " navigate between vim and tmux
+
+
+" ----- Languages / Frameworks ----- "
+
+" Flutter / Dart
+Plug 'dart-lang/dart-vim-plugin'  " dart language syntax
+"Plug 'thosakwe/vim-flutter'  " flutter development support
+
+" Haskell
+Plug 'neovimhaskell/haskell-vim'  " haskell language syntax
+
+" Markdown
+Plug 'plasticboy/vim-markdown'  " markdown language syntax
+
+" Python
+Plug 'vim-python/python-syntax'  " python language syntax
+Plug 'tmhedberg/SimpylFold'  " enable folding python code
+
+" SQL
+Plug 'magicalbanana/sql-syntax-vim'  " sql language syntax
 
 
 call plug#end()
