@@ -79,6 +79,11 @@ call plug#end()
 " -------------------------- "
 
 
+" ----- airline ----- "
+
+let g:airline_powerline_fonts = 1
+
+
 " ----- ale (linter) ----- "
 
 let g:ale_set_highlights = 0
