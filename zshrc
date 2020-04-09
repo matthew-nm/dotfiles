@@ -48,6 +48,7 @@ precmd() {
 zstyle :prompt:pure:path color 044
 zstyle :prompt:pure:git:branch color 249
 zstyle :prompt:pure:git:arrow color 119
+zstyle :prompt:pure:execution_time color 220
 
 
 # ===== CONFIG ===== #

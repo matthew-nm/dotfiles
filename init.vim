@@ -272,7 +272,7 @@ hi VertSplit    ctermbg=none ctermfg=236
 "hi TabLineFill  ctermfg=235
 
 " ale (linter engine)
-hi ALEErrorSign   ctermbg=none ctermfg=160
+hi ALEErrorSign   ctermbg=none ctermfg=124
 hi ALEWarningSign ctermbg=none ctermfg=178
 
 " Git Gutter (git changes)
