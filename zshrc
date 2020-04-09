@@ -3,6 +3,7 @@
 export PATH="$HOME"/bin:"$PATH"
 export PATH="$HOME"/.local/bin:$PATH
 
+# General
 alias o="xdg-open"
 alias lla='ls -lA'
 alias clip='xsel -ib'
@@ -78,10 +79,22 @@ plugins=(
   git
   tmux
   zsh_reload
+  zsh-syntax-highlighting  # keep at end of list to ensure proper coloring
 )
 
 
 # ===== LOAD ===== #
+
+# Move into symdirs
+for key val in ${(kv)SYMDIRS}; do
+  if [[ $PWD == $key* ]]; then
+    cd $val${PWD:${#key}}
+    break
+  fi
+done
+# Example assoc array for private zshrc
+# typeset -A SYMDIRS
+# SYMDIRS[/mnt/Data/Dropbox]='/home/matthew/Dropbox'
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
