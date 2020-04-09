@@ -54,7 +54,7 @@ zstyle :prompt:pure:execution_time color 220
 
 # ===== CONFIG ===== #
 
-ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOQUIT=false
 # CASE_SENSITIVE="true"
 # HYPHEN_INSENSITIVE="true"
