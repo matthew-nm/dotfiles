@@ -21,7 +21,6 @@ Plug 'mbbill/undotree'  " show branching history
 Plug 'janko/vim-test'  " run tests inside vim
 Plug 'tomtom/tcomment_vim'  " comment/uncomment lines easily
 Plug 'vim-scripts/YankRing.vim'  " show yank history
-Plug 'jiangmiao/auto-pairs'  " automatically insert paired characters, ie. () [] {}
 Plug 'tpope/vim-characterize'  " more character info on 'ga'
 "Plug 'konfekt/fastfold'  " speed up folding
 
@@ -39,8 +38,7 @@ Plug 'jremmen/vim-ripgrep'  " stupid-fast grep'ing
 Plug 'stefandtw/quickfix-reflector.vim'  " changes to quickfix are saved to files
 
 " Completion / Linting
-Plug 'dense-analysis/ale'  " linter
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }  " completion engine
+Plug 'neoclide/coc.nvim', {'branch': 'release'}  " completion engine
 Plug 'ervandew/supertab'  " use <TAB> to select completion option
 
 " Git
@@ -82,27 +80,6 @@ call plug#end()
 " ----- airline ----- "
 
 let g:airline_powerline_fonts = 1
-
-
-" ----- ale (linter) ----- "
-
-let g:ale_set_highlights = 0
-let g:ale_sign_column_always = 1
-"let g:ale_change_sign_column_color = 1
-let g:airline#extensions#ale#enabled = 1
-
-let g:ale_linters = {'rust': ['rls', 'cargo']}
-
-" python
-let g:ale_python_flake8_options = '--ignore=E201,E202,E203,E221,E222,E225,E226,E231,E251,E262,E265,E266,E301,E302,E303,E306,E402,E501,W605'
-
-" rust
-let g:ale_rust_ignore_error_codes = []
-
-
-" ----- deoplete ----- "
-
-let g:deoplete#enable_at_startup = 1
 
 
 " ----- indentLine ----- "
@@ -155,6 +132,11 @@ let g:rg_command = 'rg --vimgrep -S'  " use smartcase search
 let g:SimpylFold_fold_import = 0
 let g:SimpylFold_fold_docstring = 0
 let g:SimpylFold_docstring_preview = 1
+
+
+" ----- supertab ----- "
+
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 
 " ----- vim-tmux-navigator ----- "

@@ -14,8 +14,16 @@ set mouse=a  " turn on mouse for all modes
 set pastetoggle=<F3>  " toggle PASTE mode
 set relativenumber  " show line numbers (relative to current line)
 set scrolloff=7  " scroll offset from edge of screen
+set shortmess+=c  " c - don't give ins-completion-menu messages (req for coc.nvim)
+set signcolumn=yes  " set signcolumn to always show
 set noshowmode  " don't show mode (Normal, Visual, etc) at bottom of screen
 set whichwrap+=<,>  " allow space and backspace to move around wrapped lines
+
+" Files
+set nobackup  " don't create backup file before overwrite (req for coc.nvim)
+set nowritebackup  " don't create backup file during overwrite (req for coc.nvim)
+set noswapfile  " don't create swapfile
+set updatetime=300  " how many milliseconds to sit idle before writing swap (probably not necessary if swapfile is off)
 
 " <TAB>
 set expandtab  " expand TABs into spaces
@@ -148,6 +156,43 @@ nmap <leader>tv :TestVisit<cr>
 " Far.vim replace
 "nmap <leader>r :Farp<cr>
 "nmap <leader>R :Fardo<cr>
+
+
+" ----- COC.NVIM ----- "
+
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
+
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
 " ----- COMMANDS + FUNCTIONS ----- "
