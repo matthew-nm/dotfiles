@@ -85,7 +85,8 @@ let g:airline_powerline_fonts = 1
 " ----- indentLine ----- "
 
 let g:indentLine_char = '│'
-let g:indentLine_fileTypeExclude = ['json', 'markdown']
+let g:indentLine_color_term = 238
+let g:indentLine_fileTypeExclude = ['fzf','json','markdown']
 
 
 " ----- Markdown sytnax ----- "

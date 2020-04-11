@@ -233,6 +233,15 @@ function CloseHiddenBuffers()
   endfor
 endfunction
 
+" Show hightlight group of word under cursor
+command! ShowHighlightGroup :call <SID>SynStack()
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 " <CR>: close popup and save indent
 "inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 "function! s:my_cr_function()
@@ -284,7 +293,9 @@ hi Folded       ctermfg=49 ctermbg=NONE
 " hi IncSearch    ctermbg=214 cterm=underline
 hi Search       ctermbg=214 cterm=none
 hi Todo ctermfg=196 ctermbg=none cterm=none
-hi Type cterm=none
+hi Type cterm=none ctermfg=122
+hi Typedef ctermfg=211
+hi StorageClass ctermfg=147
 hi Constant ctermfg=198
 hi Identifier ctermfg=45
 hi Special ctermfg=224
@@ -308,6 +319,7 @@ hi CursorLineNr ctermfg=214 ctermbg=235
 hi CursorLine   ctermbg=235 cterm=NONE
 " hi SignColumn   ctermbg=none ctermfg=none
 hi VertSplit    ctermbg=none ctermfg=236
+hi Pmenu        ctermfg=153 ctermbg=53
 
 "hi CursorColumn ctermbg=235
 "hi ColorColumn  ctermbg=235
@@ -324,3 +336,7 @@ hi ALEWarningSign ctermbg=none ctermfg=178
 hi GitGutterAdd    ctermbg=none ctermfg=002
 hi GitGutterChange ctermbg=none ctermfg=220
 hi GitGutterDelete ctermbg=none ctermfg=001
+
+" Statusline
+hi clear StatusLineNC
+hi StatusLine ctermbg=234
