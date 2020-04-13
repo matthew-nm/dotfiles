@@ -192,9 +192,6 @@ function! s:show_documentation()
   endif
 endfunction
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
 
 " ----- COMMANDS + FUNCTIONS ----- "
 
@@ -203,6 +200,9 @@ command! Src :so $MYVIMRC
 
 " Sudo write
 command! Sudow w !sudo tee % >/dev/null
+
+" Format current buffer
+command! -nargs=0 Format :call CocAction('format')
 
 " Clean trailing whitespace
 command! CleanWhitespace
@@ -256,10 +256,14 @@ endfunc
 
 filetype plugin indent on  " required here for neovim
 
-augroup all
+augroup format
   autocmd!
   " Disable auto comment insertion
   autocmd FileType * setlocal formatoptions-=cro
+  " Highlight the symbol and its references when holding the cursor.
+  " autocmd CursorHold * silent call CocActionAsync('highlight')
+  " Automatically format text when leaving Insert mode
+  autocmd InsertLeave * :call CocAction('format')
 augroup END
 
 augroup text
