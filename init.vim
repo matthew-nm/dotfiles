@@ -95,7 +95,7 @@ nmap <leader>v :vsplit<cr>
 nmap <leader>V :split<cr>
 
 " New tab
-nmap <leader>tt :tabnew<cr>
+nmap <leader>t :tabnew<cr>
 nmap <leader>T0 :0tabnew<cr>
 nmap <leader>T$ :$tabnew<cr>
 
@@ -124,11 +124,12 @@ nmap <leader>p :YRShow<cr>
 nmap <leader>f :Files<cr>
 
 " vim-test
-nmap <leader>tn :TestNearest<cr>
-nmap <leader>tf :TestFile<cr>
-nmap <leader>ts :TestSuite<cr>
-nmap <leader>tl :TestLast<cr>
-nmap <leader>tv :TestVisit<cr>
+" THESE SHOULD BE CHANGED SO NEW TAB ISN'T SLOWED DOWN
+" nmap <leader>tn :TestNearest<cr>
+" nmap <leader>tf :TestFile<cr>
+" nmap <leader>ts :TestSuite<cr>
+" nmap <leader>tl :TestLast<cr>
+" nmap <leader>tv :TestVisit<cr>
 
 " Toggle tagbar
 "nmap <silent> <leader>E :TagbarToggle<cr>
