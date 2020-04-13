@@ -23,6 +23,11 @@ alias logg='log --graph --decorate --all'
 # Python / Django
 alias dgo='python manage.py'
 
+# Android Studio
+alias avdl='~/Library/Android/sdk/tools/emulator -list-avds'
+alias avdr='~/Library/Android/sdk/tools/emulator -avd'
+alias avd1='~/Library/Android/sdk/tools/emulator -avd $(~/Library/Android/sdk/tools/emulator -list-avds | head -n 1)'
+
 # Functions
 function proc() {
   ps aux | grep $1 --color=always | grep -v "grep.\+$1"
