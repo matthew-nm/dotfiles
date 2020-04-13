@@ -54,6 +54,7 @@ Plug 'christoomey/vim-tmux-navigator'  " navigate between vim and tmux
 " Flutter / Dart
 Plug 'dart-lang/dart-vim-plugin'  " dart language syntax
 Plug 'reisub0/hot-reload.vim'  " hot-reload on save
+Plug 'Nash0x7E2/awesome-flutter-snippets'  " vscode snippets for Flutter
 
 " Haskell
 Plug 'neovimhaskell/haskell-vim'  " haskell language syntax
