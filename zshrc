@@ -28,13 +28,28 @@ alias avdl='~/Library/Android/sdk/tools/emulator -list-avds'
 alias avdr='~/Library/Android/sdk/tools/emulator -avd'
 alias avd1='~/Library/Android/sdk/tools/emulator -avd $(~/Library/Android/sdk/tools/emulator -list-avds | head -n 1)'
 
-# Functions
+
+# ===== THEME ===== #
+
+zstyle :prompt:pure:path color 044
+zstyle :prompt:pure:git:branch color 249
+zstyle :prompt:pure:git:arrow color 119
+zstyle :prompt:pure:execution_time color 220
+
+
+# ===== FUNCTIONS ===== #
+
+# search for process
 function proc() {
   ps aux | grep $1 --color=always | grep -v "grep.\+$1"
 }
+
+# make dir and enter
 function md() {
   mkdir -p "$@" && cd "$1";
 }
+
+# install vim-plug
 function vim-plug() {
   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -49,12 +64,6 @@ precmd() {
     CONDA_DEFAULT_ENV="$(basename "$CONDA_DEFAULT_ENV")"
   fi
 }
-
-# pure prompt
-zstyle :prompt:pure:path color 044
-zstyle :prompt:pure:git:branch color 249
-zstyle :prompt:pure:git:arrow color 119
-zstyle :prompt:pure:execution_time color 220
 
 
 # ===== CONFIG ===== #
