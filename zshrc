@@ -55,6 +55,13 @@ function vim-plug() {
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
+# fix path issues
+function fix_path_issues() {
+  PATH_UNIQ=$(echo -n $PATH | tr ":" "\n" | awk '!x[$0]++')
+  PATH_SORT="$(grep conda <<<$PATH_UNIQ)\n$(grep -v conda <<<$PATH_UNIQ)"
+  PATH=$(echo $PATH_SORT|tr "\n" ":")
+}
+
 # Execute before showing prompt
 precmd() {
   # Fix pure prompt conda display
@@ -118,3 +125,6 @@ source $ZSH/oh-my-zsh.sh
 fpath+=$HOME/utilities/pure
 autoload -U promptinit; promptinit
 prompt pure
+
+# fix path issues
+fix_path_issues
