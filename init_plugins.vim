@@ -39,7 +39,6 @@ Plug 'stefandtw/quickfix-reflector.vim'  " changes to quickfix are saved to file
 
 " Completion / Linting
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " completion engine
-Plug 'ervandew/supertab'  " use <TAB> to select completion option
 
 " Git
 Plug 'airblade/vim-gitgutter'  " show the change status of a line
@@ -134,11 +133,6 @@ let g:rg_command = 'rg --vimgrep -S'  " use smartcase search
 let g:SimpylFold_fold_import = 0
 let g:SimpylFold_fold_docstring = 0
 let g:SimpylFold_docstring_preview = 1
-
-
-" ----- supertab ----- "
-
-let g:SuperTabDefaultCompletionType = "<c-n>"
 
 
 " ----- vim-tmux-navigator ----- "
