@@ -22,6 +22,7 @@ Plug 'janko/vim-test'  " run tests inside vim
 Plug 'tomtom/tcomment_vim'  " comment/uncomment lines easily
 Plug 'vim-scripts/YankRing.vim'  " show yank history
 Plug 'tpope/vim-characterize'  " more character info on 'ga'
+Plug 'tpope/vim-surround'  " surround text with characters or tags
 "Plug 'konfekt/fastfold'  " speed up folding
 
 " Themes

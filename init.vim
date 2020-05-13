@@ -117,6 +117,9 @@ nmap <leader><space> :noh<cr>
 " Toggle NERDTree
 nmap <silent> <leader>e :NERDTreeToggle<cr>
 
+" Toggle Coc-Explorer
+nmap <silent> <leader>E :CocCommand explorer<cr>
+
 " Toggle undotree
 nmap <silent> <leader>u :UndotreeToggle<cr>
 
