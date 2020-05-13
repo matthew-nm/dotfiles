@@ -332,32 +332,17 @@ hi TabLineSel ctermfg=36 ctermbg=none
 hi TabLine ctermfg=245 ctermbg=none
 hi TabLineFill ctermbg=none
 hi Title ctermfg=045
-"
 hi MatchParen   ctermfg=196 ctermbg=NONE cterm=none
-""hi MatchParen   ctermfg=226 ctermbg=NONE
-"
 hi LineNr       ctermbg=none
 hi CursorLineNr ctermfg=214 ctermbg=235
 hi CursorLine   ctermbg=235 cterm=NONE
-" hi SignColumn   ctermbg=none ctermfg=none
+hi SignColumn   ctermbg=none ctermfg=none
 hi VertSplit    ctermbg=none ctermfg=236
 hi Pmenu        ctermfg=153 ctermbg=53
 
-"hi CursorColumn ctermbg=235
-"hi ColorColumn  ctermbg=235
-"
-""hi TabLine      ctermfg= ctermbg=
-"hi TabLineSel   ctermfg=015 ctermbg=000
-"hi TabLineFill  ctermfg=235
-
-" ale (linter engine)
-hi ALEErrorSign   ctermbg=none ctermfg=124
-hi ALEWarningSign ctermbg=none ctermfg=178
-
-" Git Gutter (git changes)
-hi GitGutterAdd    ctermbg=none ctermfg=002
-hi GitGutterChange ctermbg=none ctermfg=220
-hi GitGutterDelete ctermbg=none ctermfg=001
+hi DiffAdd    ctermbg=none ctermfg=002
+hi DiffChange ctermbg=none ctermfg=220
+hi DiffDelete ctermbg=none ctermfg=001
 
 " Statusline
 hi clear StatusLineNC

@@ -41,8 +41,7 @@ Plug 'stefandtw/quickfix-reflector.vim'  " changes to quickfix are saved to file
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " completion engine
 
 " Git
-Plug 'airblade/vim-gitgutter'  " show the change status of a line
-Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': 'NERDTreeToggle' }  " show git status in nerdtree
+Plug 'tpope/vim-fugitive'  " git integration
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'  " navigate between vim and tmux
