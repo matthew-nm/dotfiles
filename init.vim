@@ -102,6 +102,9 @@ nmap <leader>T$ :$tabnew<cr>
 " Replace all instances of word under cusor
 nmap <leader>r :ReplaceWordUnderCursor<cr>
 
+" Rename symbol
+nmap <leader>R <Plug>(coc-rename)
+
 " Initiate ripgrep
 nmap <leader>g :Rg 
 
