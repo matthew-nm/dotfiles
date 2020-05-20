@@ -5,7 +5,7 @@ colorscheme adventurous
 let g:airline_theme='distinguished'
 
 " Editor
-set autoread  " automatically read file if changes outside vim and not inside vim
+set autoread  " automatically read file if changes outside vim and not inside vim (BROKEN in neovim)
 set cursorline  " show different coloring on line where cursor currently is
 set fillchars=vert:│,fold:—  " charcters used to separate buffers, etc.
 set hidden  " allow unsaved changes to buffers
@@ -262,6 +262,16 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" Add custom 'autoread' solution
+if ! exists("g:CheckUpdateStarted")
+    let g:CheckUpdateStarted=1
+    call timer_start(1,'CheckUpdate')
+endif
+function! CheckUpdate(timer)
+    silent! checktime
+    call timer_start(1000,'CheckUpdate')
+endfunction
 
 " <CR>: close popup and save indent
 "inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
