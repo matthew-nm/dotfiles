@@ -108,6 +108,7 @@ plugins=(
 
 # Move into symdirs
 for key val in ${(kv)SYMDIRS}; do
+  key=$(echo "$key"|tr -d \")
   if [[ $PWD == $key* ]]; then
     cd $val${PWD:${#key}}
     break
