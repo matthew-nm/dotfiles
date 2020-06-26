@@ -18,6 +18,8 @@
 	<string>692AB4E4-8046-4C12-BDB2-FC00CB6C2A2C</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideActivityIndicator</key>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LeftCommand</key>
@@ -75,10 +77,12 @@
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>466 447 347 181 0 0 1280 777 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>330 288 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>225 163 787 467 0 0 1280 777 </string>
+	<string>411 160 780 467 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>430 310 850 467 0 0 1280 777 </string>
+	<string>1033 194 780 467 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -668,7 +672,7 @@
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
-			<true/>
+			<false/>
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
@@ -678,18 +682,19 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.3.9</string>
+		<string>3.3.11</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1280, 800}}</string>
 		<key>topLeft</key>
-		<string>{160, 642}</string>
+		<string>{163, 708}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>CF53C228-ECF4-4C86-99D1-FA2392F1EBBE</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>9</integer>
+	<integer>38</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1454,8 +1459,14 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-04-12T18:46:45Z</date>
+	<date>2020-06-26T01:37:26Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>3264730769</integer>
+	<key>SUUpdateRelaunchingMarker</key>
+	<false/>
+	<key>ShowNewOutputIndicator</key>
 	<false/>
 	<key>SoundForEsc</key>
 	<false/>
@@ -1464,6 +1475,6 @@
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.9</string>
+	<string>3.3.11</string>
 </dict>
 </plist>
