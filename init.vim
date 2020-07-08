@@ -273,6 +273,18 @@ function! CheckUpdate(timer)
     call timer_start(1000,'CheckUpdate')
 endfunction
 
+" Filter Quickfix list
+function! s:FilterQuickfixList(bang, pattern)
+  let cmp = a:bang ? '!~#' : '=~#'
+  call setqflist(filter(getqflist(), "bufname(v:val['bufnr']) " . cmp . " a:pattern"))
+endfunction
+command! -bang -nargs=1 -complete=file Qfilter call s:FilterQuickfixList(<bang>0, <q-args>)
+command! -bang -nargs=1 -complete=file Qf call s:FilterQuickfixList(<bang>0, <q-args>)
+
+" Restore Quickfix list
+command! Qoriginal :colder
+command! Qo :colder
+
 " <CR>: close popup and save indent
 "inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 "function! s:my_cr_function()
