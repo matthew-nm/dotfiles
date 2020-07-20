@@ -49,16 +49,8 @@ nmap <space> /\c
 " Map <space><space> to word search
 nmap <space><space> /\<\><Left><Left>
 
-" Move to next lint error
-map <silent> <C-j> :ALENextWrap<cr>
-map <silent> <C-k> :ALEPreviousWrap<cr>
-
 " Bind system clipboard
-"vnoremap <C-c> "+y
-
-" Yank to tmux clipboard (vim-tbone)
-"nnoremap ty :Tyank<cr>
-"vnoremap ty :Tyank<cr>
+vnoremap <C-c> "+y
 
 " Fold level
 nmap z1 :set foldlevel=1<cr>
