@@ -304,8 +304,10 @@ augroup text
   autocmd!
   " Don't wrap mid-word (for text files)
   autocmd FileType text,markdown set linebreak
+  " Set tabstop
+  autocmd FileType text,markdown set tabstop=4
   " Don't conceal characters
-  "autocmd FileType markdown set conceallevel=0
+  autocmd FileType markdown set conceallevel=0
 augroup END
 
 augroup python
