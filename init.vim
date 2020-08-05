@@ -297,7 +297,7 @@ augroup format
   " Highlight the symbol and its references when holding the cursor.
   " autocmd CursorHold * silent call CocActionAsync('highlight')
   " Automatically format text when leaving Insert mode
-  autocmd InsertLeave * :call CocAction('format')
+  " autocmd InsertLeave * :call CocAction('format')
 augroup END
 
 augroup text
