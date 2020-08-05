@@ -79,8 +79,9 @@ nmap <leader>d :bw<cr>
 " Close all hidden buffers
 nmap <leader>c :call CloseHiddenBuffers()<cr>
 
-" Close all buffers (then, reopen NERDTree)
-nmap <silent> <leader>C :%bd \| NERDTreeToggle<cr>
+" Close all buffers
+nmap <silent> <leader>C :%bd<cr>
+" nmap <silent> <leader>C :%bd \| NERDTreeToggle<cr>
 
 " Splits
 nmap <leader>v :vsplit<cr>
