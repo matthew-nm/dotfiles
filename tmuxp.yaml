@@ -16,4 +16,4 @@ windows:
   - window_name: Edit
     panes:
     - shell_command:
-      - vim -c "NERDTreeToggle"
+      - vim # -c "NERDTreeToggle"
