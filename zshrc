@@ -134,6 +134,9 @@ prompt pure
 
 unsetopt sharehistory
 
+# smart case completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
+
 
 # ===== FINAL COMMANDS ===== #
 
