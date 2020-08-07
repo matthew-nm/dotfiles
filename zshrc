@@ -73,7 +73,7 @@ precmd() {
 }
 
 
-# ===== CONFIG ===== #
+# ===== PRE-LOAD CONFIG ===== #
 
 # ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOQUIT=false
@@ -114,9 +114,11 @@ for key val in ${(kv)SYMDIRS}; do
     break
   fi
 done
-# Example assoc array for private zshrc
-# typeset -A SYMDIRS
-# SYMDIRS[/mnt/Data/Dropbox]='/home/matthew/Dropbox'
+# ================================================== #
+# Example assoc array for private zshrc              #
+# typeset -A SYMDIRS                                 #
+# SYMDIRS[/mnt/Data/Dropbox]='/home/matthew/Dropbox' #
+# ================================================== #
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
@@ -126,6 +128,10 @@ source $ZSH/oh-my-zsh.sh
 fpath+=$HOME/utilities/pure
 autoload -U promptinit; promptinit
 prompt pure
+
+
+
+# ===== FINAL COMMANDS ===== #
 
 # fix path issues
 fix_path_issues
