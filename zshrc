@@ -130,6 +130,10 @@ autoload -U promptinit; promptinit
 prompt pure
 
 
+# ===== POST-LOAD CONFIG ===== #
+
+unsetopt sharehistory
+
 
 # ===== FINAL COMMANDS ===== #
 
