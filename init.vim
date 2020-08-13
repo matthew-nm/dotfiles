@@ -225,6 +225,9 @@ command! CleanWhitespace
   \ call winrestview(b:bufview) |
   \ :noh
 
+" Toggle show trailing whitespace
+command! ShowWhitespace :call ShowTrailingWhitespace#Toggle(1)
+
 " Replace all instances of word under cursor
 command! ReplaceWordUnderCursor
   \ let b:bufview=winsaveview()                         |
