@@ -1,16 +1,12 @@
 session_name: project
 windows:
   - window_name: Git
-    layout: even-horizontal
     panes:
     - shell_command:
       - tmux setenv TMUX_PWD $PWD
       - tmux rename-session ${PWD##*/}
       - clear
       - lazygit
-    - shell_command:
-      - tmux select-pane -t 1
-      - clear
   - window_name: Edit
     panes:
     - shell_command:
