@@ -125,7 +125,7 @@ export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # pure prompt
-fpath+=$HOME/utilities/pure
+fpath+=$HOME/Utilities/pure
 autoload -U promptinit && promptinit
 prompt pure
 
