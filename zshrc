@@ -8,6 +8,7 @@ alias o="xdg-open"
 alias lla='ls -lA'
 alias clip='xsel -ib'
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
+alias tmp='cd ~/tmp'
 
 # Neovim
 alias vi='nvim'
