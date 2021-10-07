@@ -100,7 +100,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
   git
   tmux
-  zsh_reload
   zsh-syntax-highlighting  # keep at end of list to ensure proper coloring
 )
 
