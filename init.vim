@@ -89,8 +89,9 @@ nmap <leader>V :split<cr>
 
 " New tab
 nmap <leader>t :tabnew<cr>
-nmap <leader>T0 :0tabnew<cr>
-nmap <leader>T$ :$tabnew<cr>
+nmap <leader>T :-1tabnew<cr>
+" nmap <leader>T0 :0tabnew<cr>
+" nmap <leader>T$ :$tabnew<cr>
 
 " Replace all instances of word under cusor
 nmap <leader>r :ReplaceWordUnderCursor<cr>
