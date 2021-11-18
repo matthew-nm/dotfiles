@@ -210,7 +210,7 @@ endfunction
 " ----- COMMANDS + FUNCTIONS ----- "
 
 " Reload init.vim
-command! Src :so $MYVIMRC
+command! Reload :source $MYVIMRC
 
 " Sudo write
 command! Sudow w !sudo tee % >/dev/null
