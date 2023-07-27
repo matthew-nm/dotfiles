@@ -6,7 +6,7 @@ require 'config.lsp'
 require 'config.lsp-lua'
 
 -- Treesitter
-require 'config.rainbow'
+-- require 'config.rainbow'
 -- require 'config.navigator'
 
 -- Navigation
