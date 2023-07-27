@@ -13,9 +13,9 @@ alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\
 alias tmp='cd ~/tmp'
 
 # Neovim
-alias vi='XDG_CONFIG_HOME=~/dotfiles/ nvim'
-alias vim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
-alias nvim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
+alias vi='XDG_CONFIG_HOME=~/dotfiles/nvim'
+alias vim='XDG_CONFIG_HOME=~/dotfiles/nvim'
+alias nvim='XDG_CONFIG_HOME=~/dotfiles/nvim'
 
 # Tmuxp
 alias tp='tmuxp load tmuxp'
