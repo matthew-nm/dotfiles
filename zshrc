@@ -3,6 +3,8 @@
 export PATH="$HOME"/bin:"$PATH"
 export PATH="$HOME"/.local/bin:$PATH
 
+export EDITOR='vi'
+
 # General
 alias o="xdg-open"
 alias lla='ls -lA'

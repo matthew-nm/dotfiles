@@ -16,8 +16,14 @@
 	<false/>
 	<key>HideActivityIndicator</key>
 	<true/>
+	<key>HideMenuBarInFullscreen</key>
+	<true/>
+	<key>HideTab</key>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>IRMemory</key>
+	<integer>4</integer>
 	<key>LeftCommand</key>
 	<integer>1</integer>
 	<key>NeverWarnAboutShortLivedSessions_692AB4E4-8046-4C12-BDB2-FC00CB6C2A2C</key>
