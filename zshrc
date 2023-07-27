@@ -53,12 +53,6 @@ function md() {
   mkdir -p "$@" && cd "$1";
 }
 
-# install vim-plug
-function vim-plug() {
-  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-}
-
 # fix path issues
 function fix_path_issues() {
   PATH_UNIQ=$(echo -n $PATH | tr ":" "\n" | awk '!x[$0]++')

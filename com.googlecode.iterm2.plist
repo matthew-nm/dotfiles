@@ -16,14 +16,8 @@
 	<false/>
 	<key>HideActivityIndicator</key>
 	<true/>
-	<key>HideMenuBarInFullscreen</key>
-	<true/>
-	<key>HideTab</key>
-	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
-	<key>IRMemory</key>
-	<integer>4</integer>
 	<key>LeftCommand</key>
 	<integer>1</integer>
 	<key>NeverWarnAboutShortLivedSessions_692AB4E4-8046-4C12-BDB2-FC00CB6C2A2C</key>
@@ -570,6 +564,8 @@
 			<string>SauceCodeProNFM 13</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
+			<key>Place Prompt at First Column</key>
+			<true/>
 			<key>Prompt Before Closing 2</key>
 			<false/>
 			<key>Right Option Key Sends</key>
@@ -602,6 +598,8 @@
 			<false/>
 			<key>Shortcut</key>
 			<string></string>
+			<key>Show Mark Indicators</key>
+			<false/>
 			<key>Silence Bell</key>
 			<true/>
 			<key>Sync Title</key>
