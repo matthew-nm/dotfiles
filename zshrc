@@ -13,8 +13,9 @@ alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\
 alias tmp='cd ~/tmp'
 
 # Neovim
-alias vi='nvim'
-alias vim='nvim'
+alias vi='XDG_CONFIG_HOME=~/dotfiles/ nvim'
+alias vim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
+alias nvim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
 
 # Tmuxp
 alias tp='tmuxp load tmuxp'
@@ -50,12 +51,6 @@ function proc() {
 # make dir and enter
 function md() {
   mkdir -p "$@" && cd "$1";
-}
-
-# install vim-plug
-function vim-plug() {
-  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 # fix path issues
