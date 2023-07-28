@@ -103,7 +103,7 @@ plugins=(
   copyfile
   copypath
   tmux
-  zsh-autosuggestions
+  # zsh-autosuggestions
   zsh-syntax-highlighting  # keep at end of list to ensure proper coloring
 )
 
