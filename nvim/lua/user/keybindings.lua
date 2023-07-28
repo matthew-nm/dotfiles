@@ -16,6 +16,7 @@ map('n', '<Leader>Q', ':qa!<CR>') -- quit all, force
 
 map('n', '<Leader>h', ':hide<CR>') -- hide buffer
 map('n', '<Leader>d', ':bw<CR>') -- delete buffer
+map('n', '<Leader>D', ':tabclose<CR>') -- close tab
 map('n', '<Leader>c', ':call CloseHiddenBuffers()<CR>') -- close hidden buffers
 map('n', '<Leader>C', ':%bd<CR>', {silent=true}) -- close all buffers
 

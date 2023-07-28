@@ -51,6 +51,7 @@ local plugins = {
   {'vim-scripts/ShowTrailingWhitespace'}, -- highlight whitespace and end of lines
   {'tpope/vim-fugitive'}, -- git commands
   {'airblade/vim-gitgutter'}, -- show git status in signcolumn
+  {'junkblocker/git-time-lapse'}, -- navigate git history of file
   {'liuchengxu/vista.vim'}, -- view code structure in a sidebar
   {'lukas-reineke/indent-blankline.nvim'}, -- view line indents
   {'numToStr/Comment.nvim'}, -- easily comment lines of code

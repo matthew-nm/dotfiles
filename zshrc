@@ -15,6 +15,7 @@ alias tmp='cd ~/tmp'
 # Neovim
 # alias vi='XDG_CONFIG_HOME=~/dotfiles/ nvim'
 # alias vim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
+alias nv='XDG_CONFIG_HOME=~/dotfiles/ nvim'
 alias nvim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
 
 # Tmuxp
