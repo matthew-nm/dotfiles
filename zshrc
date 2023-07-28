@@ -96,7 +96,13 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 plugins=(
   git
+  dirhistory
+  history
+  jsontools
+  copyfile
+  copypath
   tmux
+  zsh-autosuggestions
   zsh-syntax-highlighting  # keep at end of list to ensure proper coloring
 )
 
