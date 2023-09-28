@@ -15,3 +15,6 @@ source ~/dotfiles/zshrc
 
 ## User definitions ##
 ```
+
+## TMUX
+Install gitmux: `brew tap arl/arl && brew install gitmux`
