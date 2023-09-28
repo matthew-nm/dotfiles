@@ -1,5 +1,7 @@
 # ===== USER ===== #
 
+export MYCOLOR="${MYCOLOR:-#6cd2d4}"
+
 export PATH="$HOME"/bin:"$PATH"
 export PATH="$HOME"/.local/bin:"$PATH"
 
@@ -36,7 +38,7 @@ alias avd1='~/Library/Android/sdk/tools/emulator -avd $(~/Library/Android/sdk/to
 
 # ===== THEME ===== #
 
-zstyle :prompt:pure:path color 044
+zstyle :prompt:pure:path color "$MYCOLOR"
 zstyle :prompt:pure:git:branch color 249
 zstyle :prompt:pure:git:arrow color 119
 zstyle :prompt:pure:execution_time color 220
