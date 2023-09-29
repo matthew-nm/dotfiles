@@ -58,6 +58,7 @@ local plugins = {
   {'kylechui/nvim-surround'}, -- easily surround text
   {'cohama/lexima.vim'}, -- automatically pair ([{' etc.
   {'gabrielpoca/replacer.nvim'}, -- edit quickfix and save changes
+  {'norcalli/nvim-colorizer.lua'}, -- colorize color codes
 
 }
 
