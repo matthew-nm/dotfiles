@@ -21,3 +21,10 @@ require('telescope').setup({extensions = { -- configure undo
   },
 }})
 require('telescope').load_extension('undo') -- enable undo history
+
+require('telescope').setup({defaults = {preview = { -- configure previewer
+  check_mime_type = true,
+  filesize_limit = 8,
+  timeout = 250,
+  treesitter = true,
+}}})
