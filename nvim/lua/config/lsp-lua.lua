@@ -7,3 +7,7 @@ require('lspconfig').lua_ls.setup({
     }
   }
 })
+
+require('lspconfig.ui.windows').default_options = {
+  border = 'single'
+}
