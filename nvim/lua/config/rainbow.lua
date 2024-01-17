@@ -10,12 +10,12 @@ vim.g.rainbow_delimiters = {
         lua = 'rainbow-blocks',
     },
     highlight = {
-        'RainbowDelimiterOrange',
         'RainbowDelimiterGreen',
-        'RainbowDelimiterViolet',
-        'RainbowDelimiterBlue',
-        'RainbowDelimiterYellow',
+        -- 'RainbowDelimiterBlue',
         'RainbowDelimiterCyan',
+        'RainbowDelimiterViolet',
+        'RainbowDelimiterYellow',
+        'RainbowDelimiterOrange',
         'RainbowDelimiterRed',
     },
 }
