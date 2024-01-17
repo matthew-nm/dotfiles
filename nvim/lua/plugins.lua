@@ -64,9 +64,7 @@ local plugins = {
 
 
 local opts = {
-  ui = {
-    border = 'single'
-  }
+  ui = {border='single'}
 }
 
 -- bootstrap lazy.nvim

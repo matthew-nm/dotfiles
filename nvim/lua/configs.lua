@@ -7,6 +7,7 @@ require 'config.lsp-lua'
 require 'config.lsp-dart'
 
 -- Treesitter
+require 'config.treesitter'
 -- require 'config.rainbow'
 -- require 'config.navigator'
 
