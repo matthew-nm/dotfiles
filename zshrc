@@ -30,6 +30,10 @@ alias logg='log --graph --decorate --all'
 # Python / Django
 alias dgo='python manage.py'
 
+# Dart / Flutter
+alias drd='dart run --observe --enable-asserts --no-pause-isolates-on-exit'
+alias drdp='dart run --observe --enable-asserts'
+
 # Android Studio
 alias avdl='~/Library/Android/sdk/tools/emulator -list-avds'
 alias avdr='~/Library/Android/sdk/tools/emulator -avd'
