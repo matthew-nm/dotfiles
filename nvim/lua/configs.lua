@@ -16,7 +16,7 @@ require 'config.telescope'
 
 -- Editor
 require 'config.comment'
-require 'config.gitgutter'
+require 'config.gitsigns'
 require 'config.surround'
 require 'config.replacer'
 require 'config.colorizer-lua'

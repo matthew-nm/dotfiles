@@ -46,7 +46,7 @@ local plugins = {
 
   -- Editor
   {'tpope/vim-fugitive'}, -- git commands
-  {'airblade/vim-gitgutter'}, -- show git status in signcolumn
+  {'lewis6991/gitsigns.nvim'}, -- show git status in signcolumn
   {'junkblocker/git-time-lapse'}, -- navigate git history of file
   {'liuchengxu/vista.vim'}, -- view code structure in a sidebar
   {'numToStr/Comment.nvim'}, -- easily comment lines of code

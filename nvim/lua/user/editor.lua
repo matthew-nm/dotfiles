@@ -5,7 +5,6 @@ vim.o.relativenumber = true -- relative line numbers
 vim.o.showmode = false -- don't show editor mode at bottom
 
 vim.o.swapfile = false -- don't create swapfile
-vim.o.updatetime = 100 -- idle ms before write swap or update gitgutter
 
 vim.o.expandtab = true -- turn tabs to spaces
 vim.o.tabstop = 2 -- number of columns on tab insert
