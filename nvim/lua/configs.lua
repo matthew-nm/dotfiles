@@ -9,7 +9,6 @@ require 'config.lsp-dart'
 -- Treesitter
 require 'config.treesitter'
 require 'config.rainbow'
--- require 'config.navigator'
 
 -- Navigation
 require 'config.nvim-tmux-navigation'

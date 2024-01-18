@@ -7,7 +7,7 @@ local lsp = require('lsp-zero').preset({
 
 lsp.on_attach(function(client, bufnr)
 
-  lsp.default_keymaps({buffer = bufnr})
+  lsp.default_keymaps({buffer = bufnr}) -- map default keys
 
   vim.api.nvim_create_autocmd("CursorHold", { -- show code hints in floating window
     buffer = bufnr,

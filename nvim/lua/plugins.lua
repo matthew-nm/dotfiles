@@ -25,9 +25,6 @@ local plugins = {
   -- Treesitter
   {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'}, -- syntax engine
   {'HiPhish/rainbow-delimiters.nvim'}, -- colorize ({[]})
-  {'ray-x/navigator.lua', -- navigate through source code
-    dependencies = {'ray-x/guihua.lua', build = 'cd lua/fzy && make'},
-  },
 
   -- Navigation
   {'alexghergh/nvim-tmux-navigation'}, -- keyboard nav, nvim + tmux
