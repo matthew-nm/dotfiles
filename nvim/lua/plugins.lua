@@ -45,17 +45,17 @@ local plugins = {
   },
 
   -- Editor
-  {'ntpeters/vim-better-whitespace'}, -- highlight whitespace and end of lines
   {'tpope/vim-fugitive'}, -- git commands
   {'airblade/vim-gitgutter'}, -- show git status in signcolumn
   {'junkblocker/git-time-lapse'}, -- navigate git history of file
   {'liuchengxu/vista.vim'}, -- view code structure in a sidebar
-  {'lukas-reineke/indent-blankline.nvim'}, -- view line indents
   {'numToStr/Comment.nvim'}, -- easily comment lines of code
   {'kylechui/nvim-surround'}, -- easily surround text
   {'cohama/lexima.vim'}, -- automatically pair ([{' etc.
   {'gabrielpoca/replacer.nvim'}, -- edit quickfix and save changes
   {'norcalli/nvim-colorizer.lua'}, -- colorize color codes
+  {'ntpeters/vim-better-whitespace'}, -- highlight whitespace and end of lines
+  {'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {}}, -- view line indents
 
 }
 
