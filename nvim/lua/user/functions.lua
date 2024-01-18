@@ -1,6 +1,6 @@
 -- Close hidden buffers
 vim.cmd([[
-function CloseHiddenBuffers()
+function DeleteHiddenBuffers()
   let open_buffers = []
   for i in range(tabpagenr('$'))
     call extend(open_buffers, tabpagebuflist(i + 1))

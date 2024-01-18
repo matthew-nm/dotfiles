@@ -16,9 +16,9 @@ map('n', '<Leader>Q', ':qa!<CR>') -- quit all, force
 
 map('n', '<Leader>h', ':hide<CR>') -- hide buffer
 map('n', '<Leader>d', ':bw<CR>') -- delete buffer
-map('n', '<Leader>D', ':tabclose<CR>') -- close tab
-map('n', '<Leader>c', ':call CloseHiddenBuffers()<CR>') -- close hidden buffers
-map('n', '<Leader>C', ':%bd<CR>', {silent=true}) -- close all buffers
+map('n', '<Leader>ch', ':call DeleteHiddenBuffers()<CR>') -- delete hidden buffers
+map('n', '<Leader>ct', ':windo bd<CR>') -- delete all buffers in tab
+map('n', '<Leader>ca', ':%bd<CR>', {silent=true}) -- delete all buffers
 
 map('n', 'k', 'gk') -- move with wrapped lines
 map('n', 'j', 'gj')
