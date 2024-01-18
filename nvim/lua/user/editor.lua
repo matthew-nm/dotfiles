@@ -13,6 +13,7 @@ vim.o.shiftwidth = 0 -- 0 uses tabstop value
 
 vim.o.foldmethod = 'expr' -- fold via user-defined expression
 vim.o.foldexpr = 'nvim_treesitter#foldexpr()' -- define fold expression
+vim.o.foldlevelstart = 99
 
 vim.api.nvim_create_autocmd( -- improve upon autoread (autoread must be enabled, is by default)
 { "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
@@ -22,8 +23,6 @@ vim.api.nvim_create_autocmd( -- improve upon autoread (autoread must be enabled,
 
 -- filetype specific
 vim.cmd([[
-autocmd BufReadPost,FileReadPost * normal zR  " unfold code on open
-
 augroup format
   autocmd!
   autocmd FileType * setlocal formatoptions-=cro  " Disable auto comment insertion
