@@ -9,12 +9,12 @@ lsp.on_attach(function(client, bufnr)
 
   lsp.default_keymaps({buffer = bufnr}) -- map default keys
 
-  vim.api.nvim_create_autocmd("CursorHold", { -- show code hints in floating window
+  vim.api.nvim_create_autocmd('CursorHold', { -- show code hints in floating window
     buffer = bufnr,
     callback = function()
       local opts = {
         focusable = false,
-        close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+        close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
         border = 'rounded',
         source = 'always',
         prefix = ' ',
@@ -30,6 +30,14 @@ lsp.setup()
 
 vim.diagnostic.config({ -- hide inline code hints
 	virtual_text = false,
+})
+
+
+----- Configure Mason -----
+require('mason').setup({
+  ui = {
+    border = 'single',
+  }
 })
 
 
