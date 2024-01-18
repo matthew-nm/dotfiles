@@ -18,21 +18,6 @@ vim.cmd([[
 command! Sudow w !sudo tee % >/dev/null
 ]])
 
--- Clean trailing whitespace
-vim.cmd([[
-command! WhitespaceClean
-  \ let b:bufview=winsaveview() |
-  \ :%s/\s\+$//g                |
-  \ :execute "normal \<C-O>"    |
-  \ call winrestview(b:bufview) |
-  \ :noh
-]])
-
--- Toggle show trailing whitespace
-vim.cmd([[
-command! WhitespaceShow :call ShowTrailingWhitespace#Toggle(1)
-]])
-
 -- Show highlight group for symbol under cursor
 vim.cmd([[
 command! ShowHighlightGroup :call SynStack()

@@ -41,9 +41,4 @@ augroup python
   autocmd FileType python hi pythonSpaceError ctermfg=none ctermbg=none
   autocmd FileType python set tabstop=4
 augroup END
-
-augroup json
-  autocmd!
-  autocmd FileType json call ShowTrailingWhitespace#SetLocalExtraPattern(',\s$')  " Don't highlight single extra space at end of json lines
-augroup END
 ]])

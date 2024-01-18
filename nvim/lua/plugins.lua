@@ -48,7 +48,7 @@ local plugins = {
   },
 
   -- Editor
-  {'vim-scripts/ShowTrailingWhitespace'}, -- highlight whitespace and end of lines
+  {'ntpeters/vim-better-whitespace'}, -- highlight whitespace and end of lines
   {'tpope/vim-fugitive'}, -- git commands
   {'airblade/vim-gitgutter'}, -- show git status in signcolumn
   {'junkblocker/git-time-lapse'}, -- navigate git history of file
