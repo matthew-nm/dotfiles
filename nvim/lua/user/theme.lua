@@ -9,3 +9,6 @@ require'lualine'.setup{
     theme = 'tokyonight'
   }
 }
+
+-- Rainbow Delimiters
+vim.api.nvim_set_hl(0, 'RainbowDelimiterGreen', {fg = '#85d152'})
