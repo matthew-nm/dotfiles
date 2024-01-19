@@ -3,6 +3,7 @@ vim.o.cursorline = true -- highlight line cursor is on
 vim.o.number = true -- line numbers
 vim.o.relativenumber = true -- relative line numbers
 vim.o.showmode = false -- don't show editor mode at bottom
+vim.o.updatetime = 100 -- quicken updates for LSP diagnostic windows
 
 vim.o.swapfile = false -- don't create swapfile
 
