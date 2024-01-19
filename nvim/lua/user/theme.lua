@@ -11,4 +11,4 @@ require'lualine'.setup{
 }
 
 -- Rainbow Delimiters
-vim.api.nvim_set_hl(0, 'RainbowDelimiterGreen', {fg = '#85d152'})
+vim.api.nvim_set_hl(0, 'RainbowDelimiterGreen', {fg = '#9dc96d'})
