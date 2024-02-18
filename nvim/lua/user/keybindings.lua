@@ -43,6 +43,8 @@ map('n', '<Leader><Space>', ':nohlsearch<CR>', {silent=true}) -- disable highlig
 
 map('v', '<C-c>', [["+y]]) -- Ctrl+c copy to system clipboard
 
+map('n', '<Leader>?', ':Telescope keymaps<CR>')  -- View all keybindings
+
 
 ----- Tools -----
 

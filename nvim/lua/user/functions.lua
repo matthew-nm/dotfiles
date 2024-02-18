@@ -20,11 +20,9 @@ command! Sudow w !sudo tee % >/dev/null
 
 -- Show highlight group for symbol under cursor
 vim.cmd([[
-command! ShowHighlightGroup :call SynStack()
-function! SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
+command! ShowHighlightGroup :call SynGroup()
+function! SynGroup()
+    let l:s = synID(line('.'), col('.'), 1)
+    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
 ]])
