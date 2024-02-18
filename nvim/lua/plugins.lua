@@ -56,6 +56,10 @@ local plugins = {
   {'norcalli/nvim-colorizer.lua'}, -- colorize color codes
   {'ntpeters/vim-better-whitespace'}, -- highlight whitespace and end of lines
   {'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {}}, -- view line indents
+  { -- highlight and jump to todo, fixme, etc.
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
 
 }
 
