@@ -22,8 +22,8 @@ map('n', '<Leader>ca', ':%bd<CR>', {silent=true}) -- delete all buffers
 
 map('n', 'k', 'gk') -- move with wrapped lines
 map('n', 'j', 'gj')
-map('n', 'K', 'gk')
-map('n', 'J', 'gj')
+map('n', 'K', '<C-y>') -- move screen
+map('n', 'J', '<C-e>')
 
 map('i', 'jj', '<ESC>') -- jj to exit insert mode
 
