@@ -83,3 +83,7 @@ end, { desc = "Next todo comment" })
 vim.keymap.set("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
+
+-- Flutter-Tools
+map('n', '<Leader>Fo', ':FlutterOutlineToggle<CR>', {silent=true}) -- show code outline
+map('n', '<Leader>Fc', ':Telescope flutter commands<CR>', {silent=true}) -- show flutter commands via Telescope

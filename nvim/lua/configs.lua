@@ -4,7 +4,7 @@ require 'config.lualine'
 -- LSP
 require 'config.lsp'
 require 'config.lsp-lua'
-require 'config.lsp-dart'
+require 'config.lsp-flutter'
 
 -- Treesitter
 require 'config.treesitter'

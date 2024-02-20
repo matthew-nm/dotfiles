@@ -44,6 +44,17 @@ local plugins = {
     }
   },
 
+  -- Languages
+  { -- Flutter / Dart
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        'stevearc/dressing.nvim',
+    },
+    config = true,
+  },
+
   -- Editor
   {'tpope/vim-fugitive'}, -- git commands
   {'lewis6991/gitsigns.nvim'}, -- show git status in signcolumn
