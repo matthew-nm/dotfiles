@@ -7,7 +7,7 @@ local function map(mode, lhs, rhs, opts)
 end
 
 
------ Editor keybindings -----
+----- Editor -----
 
 map('n', '<Leader>w', ':w<CR>') -- save
 
@@ -43,10 +43,13 @@ map('n', '<Leader><Space>', ':nohlsearch<CR>', {silent=true}) -- disable highlig
 
 map('v', '<C-c>', [["+y]]) -- Ctrl+c copy to system clipboard
 
-map('n', '<Leader>?', ':Telescope keymaps<CR>')  -- View all keybindings
+map('n', '<A-/>', ':Telescope keymaps<CR>')  -- View all keybindings
 
 
 ----- Tools -----
+
+-- LSP
+map('n', 'gk', ':lua vim.lsp.buf.hover()<CR>') -- show definition preview
 
 -- Neotree
 map('n', '<Leader>e', ':Neotree left toggle<CR>', {silent=true}) -- toggle file explorer
@@ -59,10 +62,10 @@ map('n', '<Leader>g', ':Telescope live_grep<CR>', {silent=true}) -- search for w
 map('n', '<Leader>u', ':Telescope undo<CR>', {silent=true}) -- view undo history
 
 -- Yanky
-map({'n','x'}, 'p', '<Plug>(YankyPutAfter)') -- enable yanky yank ring
+map({'n','x'}, 'p', '<Plug>(YankyPutAfter)') -- put
 map({'n','x'}, 'P', '<Plug>(YankyPutBefore)')
-map({'n','x'}, 'gp', '<Plug>(YankyGPutAfter)')
-map({'n','x'}, 'gP', '<Plug>(YankyGPutBefore)')
+map({'n','x'}, 'mp', '<Plug>(YankyGPutAfter)') -- put and move
+map({'n','x'}, 'mP', '<Plug>(YankyGPutBefore)')
 map('n', '<C-n>', '<Plug>(YankyCycleForward)')
 map('n', '<C-p>', '<Plug>(YankyCycleBackward)')
 
@@ -85,5 +88,5 @@ vim.keymap.set("n", "[t", function()
 end, { desc = "Previous todo comment" })
 
 -- Flutter-Tools
-map('n', '<Leader>Fo', ':FlutterOutlineToggle<CR>', {silent=true}) -- show code outline
-map('n', '<Leader>Fc', ':Telescope flutter commands<CR>', {silent=true}) -- show flutter commands via Telescope
+map('n', 'Fo', ':FlutterOutlineToggle<CR>', {silent=true}) -- show code outline
+map('n', 'Fc', ':Telescope flutter commands<CR>', {silent=true}) -- show flutter commands via Telescope

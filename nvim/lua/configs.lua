@@ -5,6 +5,7 @@ require 'config.lualine'
 require 'config.lsp'
 require 'config.lsp-lua'
 require 'config.lsp-flutter'
+require 'config.goto-preview'
 
 -- Treesitter
 require 'config.treesitter'

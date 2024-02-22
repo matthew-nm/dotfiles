@@ -68,9 +68,10 @@ local plugins = {
   {'ntpeters/vim-better-whitespace'}, -- highlight whitespace and end of lines
   {'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {}}, -- view line indents
   { -- highlight and jump to todo, fixme, etc.
-    "folke/todo-comments.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    'folke/todo-comments.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
   },
+  {'rmagatti/goto-preview'}, -- preview LSP actions in floating windows
 
 }
 
