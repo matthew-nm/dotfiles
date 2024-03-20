@@ -1,6 +1,7 @@
 ----- Configure LSP -----
 local lsp = require('lsp-zero').preset({
   manage_nvim_cmp = {
+    set_sources = 'recommended',
     set_extra_mappings = true,
   }
 })
@@ -43,6 +44,8 @@ require('mason').setup({
 
 ----- Configure CMP -----
 local cmp = require('cmp')
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
   mapping = {

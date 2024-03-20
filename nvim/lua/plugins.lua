@@ -18,6 +18,7 @@ local plugins = {
       -- autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-nvim-lsp'},
+      {'saadparwaiz1/cmp_luasnip'},
       {'L3MON4D3/LuaSnip'},
     }
   },
@@ -50,8 +51,8 @@ local plugins = {
     'akinsho/flutter-tools.nvim',
     lazy = false,
     dependencies = {
-        'nvim-lua/plenary.nvim',
-        'stevearc/dressing.nvim',
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim',
     },
     config = true,
   },
@@ -74,6 +75,11 @@ local plugins = {
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
   {'rmagatti/goto-preview'}, -- preview LSP actions in floating windows
+
+  -- Snippets
+  {'rafamadriz/friendly-snippets'}, -- multi-language snippets
+  {'Nash0x7E2/awesome-flutter-snippets'}, -- Flutter, general
+  {'ArkrootHQ/freezed-snippets'}, -- Flutter, `freezed` package
 
 }
 
