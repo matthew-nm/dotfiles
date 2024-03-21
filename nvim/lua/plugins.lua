@@ -80,6 +80,7 @@ local plugins = {
   {'rafamadriz/friendly-snippets'}, -- multi-language snippets
   {'Nash0x7E2/awesome-flutter-snippets'}, -- Flutter, general
   {'ArkrootHQ/freezed-snippets'}, -- Flutter, `freezed` package
+  {'RobertBrunhage/flutter-riverpod-snippets'}, -- Flutter, `riverpod` package
 
 }
 
