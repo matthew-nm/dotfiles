@@ -2,6 +2,7 @@
 
 export MYCOLOR="${MYCOLOR:-#6cd2d4}"
 
+export PATH="$HOME"/dotfiles/scripts:"$PATH"
 export PATH="$HOME"/bin:"$PATH"
 export PATH="$HOME"/.local/bin:"$PATH"
 
