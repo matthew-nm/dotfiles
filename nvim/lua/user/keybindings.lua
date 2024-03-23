@@ -92,5 +92,5 @@ map('n', 'Fo', ':FlutterOutlineToggle<CR>', {silent=true}) -- show code outline
 map('n', 'Fc', ':Telescope flutter commands<CR>', {silent=true}) -- show flutter commands via Telescope
 
 -- Pubspec Assist
-map('n', 'Fd', ':PubspecAssistAddDependency') -- add regular dependency
-map('n', 'Fdd', ':PubspecAssistAddDevDependency') -- add dev dependency
+map('n', 'Fd', ':PubspecAssistAddDependency ') -- add regular dependency
+map('n', 'FD', ':PubspecAssistAddDevDependency ') -- add dev dependency
