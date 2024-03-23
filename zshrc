@@ -34,6 +34,11 @@ alias dgo='python manage.py'
 # Dart / Flutter
 alias drd='dart run --observe --enable-asserts --no-pause-isolates-on-exit'
 alias drdp='dart run --observe --enable-asserts'
+alias fb='dart run build_runner watch -d'
+function fr() {
+  flutter run --pid-file "/tmp/flutter-$1.pid"
+}
+alias far='bash ~/dotfiles/scripts/flutter/hotreload.sh'
 
 # Android Studio
 alias avdl='~/Library/Android/sdk/tools/emulator -list-avds'
