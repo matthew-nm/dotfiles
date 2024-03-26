@@ -1,4 +1,4 @@
-# ===== USER ===== #
+# ----- USER ----- #
 
 export MYCOLOR="${MYCOLOR:-#6cd2d4}"
 
@@ -32,12 +32,10 @@ alias logg='log --graph --decorate --all'
 alias dgo='python manage.py'
 
 # Dart / Flutter
-alias drd='dart run --observe --enable-asserts --no-pause-isolates-on-exit'
-alias drdp='dart run --observe --enable-asserts'
+alias dr='dart run --observe --enable-asserts --no-pause-isolates-on-exit'
+alias drp='dart run --observe --enable-asserts'
 alias fb='dart run build_runner watch -d'
-function fr() {
-  flutter run --pid-file "/tmp/flutter-$1.pid"
-}
+function fr() {flutter run --pid-file "/tmp/flutter-$1.pid"}
 alias far='bash ~/dotfiles/scripts/flutter/hotreload.sh'
 
 # Android Studio
@@ -46,7 +44,7 @@ alias avdr='~/Library/Android/sdk/tools/emulator -avd'
 alias avd1='~/Library/Android/sdk/tools/emulator -avd $(~/Library/Android/sdk/tools/emulator -list-avds | head -n 1)'
 
 
-# ===== THEME ===== #
+# ----- THEME ----- #
 
 zstyle :prompt:pure:path color "$MYCOLOR"
 zstyle :prompt:pure:git:branch color 249
@@ -56,7 +54,7 @@ zstyle :prompt:pure:execution_time color 220
 export EXA_COLORS="da=1;34"
 
 
-# ===== FUNCTIONS ===== #
+# ----- FUNCTIONS ----- #
 
 # search for process
 function proc() {
@@ -64,7 +62,7 @@ function proc() {
 }
 
 # make dir and enter
-function md() {
+function mcd() {
   mkdir -p "$@" && cd "$1";
 }
 
@@ -86,7 +84,7 @@ precmd() {
 }
 
 
-# ===== PRE-LOAD CONFIG ===== #
+# ----- PRE-LOAD CONFIG ----- #
 
 # ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOQUIT=false
@@ -105,7 +103,7 @@ COMPLETION_WAITING_DOTS="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 
-# ===== PLUGINS ===== #
+# ----- PLUGINS ----- #
 
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -122,7 +120,7 @@ plugins=(
 )
 
 
-# ===== LOAD ===== #
+# ----- LOAD ----- #
 
 # Move into symdirs
 for key val in ${(kv)SYMDIRS}; do
@@ -132,11 +130,11 @@ for key val in ${(kv)SYMDIRS}; do
     break
   fi
 done
-# ================================================== #
+# -------------------------------------------------- #
 # Example assoc array for private zshrc              #
 # typeset -A SYMDIRS                                 #
 # SYMDIRS[/mnt/Data/Dropbox]='/home/matthew/Dropbox' #
-# ================================================== #
+# -------------------------------------------------- #
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
@@ -148,7 +146,7 @@ autoload -U promptinit && promptinit
 prompt pure
 
 
-# ===== POST-LOAD CONFIG ===== #
+# ----- POST-LOAD CONFIG ----- #
 
 unsetopt sharehistory
 
@@ -170,7 +168,6 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' verbose yes
 
 
-# ===== FINAL COMMANDS ===== #
+# ----- FINAL COMMANDS ----- #
 
-# fix path issues
 fix_path_issues
