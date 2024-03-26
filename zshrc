@@ -8,21 +8,46 @@ export PATH="$HOME"/.local/bin:"$PATH"
 
 export EDITOR='vi'
 
+
+# ----- PLUGINS ----- #
+
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+plugins=(
+  git
+  dirhistory
+  history
+  jsontools
+  copyfile
+  copypath
+  tmux
+  # zsh-autosuggestions
+  zsh-syntax-highlighting  # keep at end of list to ensure proper coloring
+)
+
+
+# ----- ALIASES ----- #
+
 # General
 alias o="xdg-open"
-alias lla='ls -lA'
+function fo() {eval "$@" $(fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')}
+# alias lla='ls -lA'
+function mcd() {mkdir -p "$@" && cd "$1"}
+function proc() {ps aux | grep $1 --color=always | grep -v "grep.\+$1"}
 alias clip='xsel -ib'
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
 alias tmp='cd ~/tmp'
 
 # Neovim
-# alias vi='XDG_CONFIG_HOME=~/dotfiles/ nvim'
-# alias vim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
-alias nv='XDG_CONFIG_HOME=~/dotfiles/ nvim'
-alias nvim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
+_start_nvim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
+alias nv="$_start_nvim"
+alias nvim="$_start_nvim"
 
-# Tmuxp
+# Tmux
 alias tp='tmuxp load tmuxp'
+alias ta='tmux attach -t'
+alias tad='tmux attach -d -t'
+alias tk='tmux kill-session -t'
 
 # Git
 alias git='git '
@@ -55,16 +80,6 @@ export EXA_COLORS="da=1;34"
 
 
 # ----- FUNCTIONS ----- #
-
-# search for process
-function proc() {
-  ps aux | grep $1 --color=always | grep -v "grep.\+$1"
-}
-
-# make dir and enter
-function mcd() {
-  mkdir -p "$@" && cd "$1";
-}
 
 # fix path issues
 function fix_path_issues() {
@@ -103,23 +118,6 @@ COMPLETION_WAITING_DOTS="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 
-# ----- PLUGINS ----- #
-
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(
-  git
-  dirhistory
-  history
-  jsontools
-  copyfile
-  copypath
-  tmux
-  # zsh-autosuggestions
-  zsh-syntax-highlighting  # keep at end of list to ensure proper coloring
-)
-
-
 # ----- LOAD ----- #
 
 # Move into symdirs
@@ -144,6 +142,9 @@ source $ZSH/oh-my-zsh.sh
 fpath+=$HOME/Utilities/pure
 autoload -U promptinit && promptinit
 prompt pure
+
+# fzf keybindings
+eval "$(fzf --zsh)"
 
 
 # ----- POST-LOAD CONFIG ----- #
