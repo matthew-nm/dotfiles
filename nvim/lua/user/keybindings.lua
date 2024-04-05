@@ -53,6 +53,7 @@ map('n', 'gk', ':lua vim.lsp.buf.hover()<CR>') -- show definition preview
 
 -- Neotree
 map('n', '<Leader>e', ':Neotree left toggle<CR>', {silent=true}) -- toggle file explorer
+map('n', '<Leader>E', ':Neotree left<CR>', {silent=true}) -- open/move to file explorer
 map('n', '-', ':Neotree float toggle<CR>', {silent=true}) -- toggle floating file explorer
 map('n', '<Leader>b', ':Neotree buffers left toggle<CR>', {silent=true}) -- toggle buffer explorer
 
