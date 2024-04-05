@@ -30,7 +30,7 @@ plugins=(
 # ----- ALIASES ----- #
 
 # General
-alias o="xdg-open"
+alias o='xdg-open'
 function fo() {eval "$@" $(fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')}
 # alias lla='ls -lA'
 function mcd() {mkdir -p "$@" && cd "$1"}
@@ -40,9 +40,7 @@ alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\
 alias tmp='cd ~/tmp'
 
 # Neovim
-_start_nvim='XDG_CONFIG_HOME=~/dotfiles/ nvim'
-alias nv="$_start_nvim"
-alias nvim="$_start_nvim"
+alias nv='nvim'
 
 # Tmux
 alias tp='tmuxp load tmuxp'
