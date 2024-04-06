@@ -1,16 +1,17 @@
 ----- Configure LSP -----
-local lsp = require('lsp-zero').preset({
-  manage_nvim_cmp = {
-    set_sources = 'recommended',
-    set_extra_mappings = true,
-  }
-})
+local lsp = require('lsp-zero')
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
 
-  lsp.default_keymaps({buffer = bufnr}) -- map default keys
+  -- map default keys
+  lsp.default_keymaps({buffer = bufnr})
 
-  vim.api.nvim_create_autocmd('CursorHold', { -- show code hints in floating window
+  -- map Telescope keys
+  vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', {buffer = bufnr})
+  vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = bufnr})
+
+  -- show code hints in floating window on hover
+  vim.api.nvim_create_autocmd('CursorHold', {
     buffer = bufnr,
     callback = function()
       local opts = {
@@ -24,12 +25,14 @@ lsp.on_attach(function(client, bufnr)
       vim.diagnostic.open_float(nil, opts)
     end
   })
+
 end)
 
 lsp.setup()
 
 
-vim.diagnostic.config({ -- hide inline code hints
+-- hide inline code hints
+vim.diagnostic.config({
 	virtual_text = false,
 })
 
@@ -44,11 +47,33 @@ require('mason').setup({
 
 ----- Configure CMP -----
 local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
-  mapping = {
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
-  }
-})
+    snippet = {
+      expand = function(args)
+        require('luasnip').lsp_expand(args.body)
+      end,
+    },
+    window = {
+      -- completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
+    },
+    mapping = cmp.mapping.preset.insert({
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.abort(),
+      ['<CR>'] = cmp.mapping.confirm({ select = false }),
+      ['<Tab>'] = cmp_action.luasnip_supertab(),
+      ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+    }),
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      { name = 'luasnip' },
+      { name = 'buffer' },
+      { name = 'path' },
+    }),
+  })
