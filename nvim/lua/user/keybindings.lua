@@ -27,6 +27,11 @@ map('n', 'J', '<C-e>')
 
 map('i', 'jj', '<ESC>') -- jj to exit insert mode
 
+map('n', ';;', 'A;<ESC>') -- ;; to append ; to line
+map('i', ';;', '<ESC>A;<ESC>') -- ;; to append ; to line
+map('n', ',,', 'A,<ESC>') -- ,, to append , to line
+map('i', ',,', '<ESC>A,<ESC>') -- ,, to append , to line
+
 map('n', '<Leader>v', ':vsplit<CR>')  -- vertical split
 map('n', '<Leader>V', ':split<CR>')  -- horizontal split
 
@@ -50,6 +55,9 @@ map('n', '<A-/>', ':Telescope keymaps<CR>')  -- View all keybindings
 
 -- LSP
 map('n', 'gk', ':lua vim.lsp.buf.hover()<CR>') -- show definition preview
+map('n', 'La', ':lua vim.lsp.buf.code_action()<CR>') -- code actions
+map('n', 'Lr', ':lua vim.lsp.buf.rename()<CR>') -- rename throughout project
+map('n', 'Lf', ':lua vim.lsp.buf.format({async = true})<CR>') -- format code
 
 -- Neotree
 map('n', '<Leader>e', ':Neotree left toggle<CR>', {silent=true}) -- toggle file explorer
@@ -88,10 +96,11 @@ vim.keymap.set("n", "[t", function()
   require("todo-comments").jump_prev()
 end, { desc = "Previous todo comment" })
 
--- Flutter-Tools
-map('n', 'Fo', ':FlutterOutlineToggle<CR>', {silent=true}) -- show code outline
-map('n', 'Fc', ':Telescope flutter commands<CR>', {silent=true}) -- show flutter commands via Telescope
+-- Flutter
+--- Flutter-Tools
+map('n', 'Lo', ':FlutterOutlineToggle<CR>', {silent=true}) -- show code outline
+map('n', 'Lc', ':Telescope flutter commands<CR>', {silent=true}) -- show flutter commands via Telescope
 
--- Pubspec Assist
-map('n', 'Fd', ':PubspecAssistAddDependency ') -- add regular dependency
-map('n', 'FD', ':PubspecAssistAddDevDependency ') -- add dev dependency
+--- Pubspec Assist
+map('n', 'Ld', ':PubspecAssistAddDependency ') -- add regular dependency
+map('n', 'LD', ':PubspecAssistAddDevDependency ') -- add dev dependency

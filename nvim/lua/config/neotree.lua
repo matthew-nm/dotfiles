@@ -6,4 +6,11 @@ require('neo-tree').setup {
       hide_gitignored = true,
     },
   },
+  window = {
+    mappings = {
+      ['V'] = 'open_split',
+      ['v'] = 'open_vsplit',
+      ['Z'] = 'expand_all_nodes',
+    },
+  },
 }
