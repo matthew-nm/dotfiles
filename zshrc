@@ -113,7 +113,7 @@ export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # aliases
-source ./zshrc-aliases
+source "${0:a:h}/zshrc-aliases"
 
 # pure prompt
 fpath+=$HOME/Utilities/pure
