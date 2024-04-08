@@ -78,6 +78,7 @@ local plugins = {
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
   {'rmagatti/goto-preview'}, -- preview LSP actions in floating windows
+  {'stevearc/resession.nvim'}, -- save/load sessions
 
   -- Snippets
   {'rafamadriz/friendly-snippets'}, -- multi-language snippets
