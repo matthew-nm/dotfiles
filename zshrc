@@ -27,47 +27,6 @@ plugins=(
 )
 
 
-# ----- ALIASES ----- #
-
-# General
-alias o='xdg-open'
-function fo() {eval "$@" $(fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')}
-# alias lla='ls -lA'
-function mcd() {mkdir -p "$@" && cd "$1"}
-function proc() {ps aux | grep $1 --color=always | grep -v "grep.\+$1"}
-alias clip='xsel -ib'
-alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
-alias tmp='cd ~/tmp'
-
-# Neovim
-alias nv='nvim'
-
-# Tmux
-alias tp='tmuxp load tmuxp'
-alias ta='tmux attach -t'
-alias tad='tmux attach -d -t'
-alias tk='tmux kill-session -t'
-
-# Git
-alias git='git '
-alias logg='log --graph --decorate --all'
-
-# Python / Django
-alias dgo='python manage.py'
-
-# Dart / Flutter
-alias dr='dart run --observe --enable-asserts --no-pause-isolates-on-exit'
-alias drp='dart run --observe --enable-asserts'
-alias fb='dart run build_runner watch -d'
-function fr() {flutter run --pid-file "/tmp/flutter-$1.pid"}
-alias far='bash ~/dotfiles/scripts/flutter/hotreload.sh'
-
-# Android Studio
-alias avdl='~/Library/Android/sdk/tools/emulator -list-avds'
-alias avdr='~/Library/Android/sdk/tools/emulator -avd'
-alias avd1='~/Library/Android/sdk/tools/emulator -avd $(~/Library/Android/sdk/tools/emulator -list-avds | head -n 1)'
-
-
 # ----- THEME ----- #
 
 zstyle :prompt:pure:path color "$MYCOLOR"
@@ -75,7 +34,23 @@ zstyle :prompt:pure:git:branch color 249
 zstyle :prompt:pure:git:arrow color 119
 zstyle :prompt:pure:execution_time color 220
 
-export EXA_COLORS="da=1;34"
+export EZA_COLORS="\
+uu=36:\
+gu=37:\
+sn=32:\
+sb=32:\
+da=1;34:\
+ur=1;34:\
+uw=35:\
+ux=36:\
+ue=36:\
+gr=1;34:\
+gw=35:\
+gx=36:\
+tr=1;34:\
+tw=35:\
+tx=36:\
+gm=36:"
 
 
 # ----- FUNCTIONS ----- #
@@ -128,14 +103,17 @@ for key val in ${(kv)SYMDIRS}; do
   fi
 done
 # -------------------------------------------------- #
-# Example assoc array for private zshrc              #
-# typeset -A SYMDIRS                                 #
+typeset -A SYMDIRS                                   #
+# Example assoc array entry for private zshrc        #
 # SYMDIRS[/mnt/Data/Dropbox]='/home/matthew/Dropbox' #
 # -------------------------------------------------- #
 
 # oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
+
+# aliases
+source ./zshrc-aliases
 
 # pure prompt
 fpath+=$HOME/Utilities/pure

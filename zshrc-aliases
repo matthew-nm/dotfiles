@@ -1,0 +1,49 @@
+# General
+alias o='xdg-open'
+alias clip='xsel -ib'
+function fo() {eval "$@" $(fzf --preview 'bat --style=numbers --color=always --line-range :500 {}')}
+
+alias tmp='cd ~/tmp'
+function mcd() {mkdir -p "$@" && cd "$1"}
+
+alias ld='eza -lDg --icons' # list dirs
+alias lf='eza -lfg --icons --color=always | grep -v /' # list files
+alias lh='eza -dlg . --icons* --group-directories-first' # list hidden
+alias la='eza -alg --icons --group-directories-first' # list all, dirs first
+alias l='eza -lg --icons --group-directories-first' # list, dirs first
+alias ls='eza -alfg --icons --color=always --sort=size | grep -v /' # list by size
+alias ltm='eza -alg --icons --sort=modified' # list by time
+alias lt='eza --tree --icons' # list as tree
+alias ltl='eza -l --tree --icons' # list as tree
+alias lg='eza -alg --icons --group-directories-first --git' # list w/ git status
+
+function proc() {ps aux | grep $1 --color=always | grep -v "grep.\+$1"}
+alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
+
+# Neovim
+alias nv='nvim'
+
+# Tmux
+alias tp='tmuxp load tmuxp'
+alias ta='tmux attach -t'
+alias tad='tmux attach -d -t'
+alias tk='tmux kill-session -t'
+
+# Git
+alias git='git '
+alias logg='log --graph --decorate --all'
+
+# Python / Django
+alias dgo='python manage.py'
+
+# Dart / Flutter
+alias dr='dart run --observe --enable-asserts --no-pause-isolates-on-exit'
+alias drp='dart run --observe --enable-asserts'
+alias fb='dart run build_runner watch -d'
+function fr() {flutter run --pid-file "/tmp/flutter-$1.pid"}
+alias far='bash ~/dotfiles/scripts/flutter/hotreload.sh'
+
+# Android Studio
+alias avdl='~/Library/Android/sdk/tools/emulator -list-avds'
+alias avdr='~/Library/Android/sdk/tools/emulator -avd'
+alias avd1='~/Library/Android/sdk/tools/emulator -avd $(~/Library/Android/sdk/tools/emulator -list-avds | head -n 1)'

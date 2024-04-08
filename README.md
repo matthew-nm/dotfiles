@@ -4,14 +4,10 @@ dotfiles
 ## ZSH
 Add the following to local file `~/.zshrc`
 ```
-# Define local
-#typeset -A SYMDIRS
-#SYMDIRS[/Volumes/Data/Drive]='/Users/matthew/Drive'
-
+source ~/dotfiles/zshrc
 #export MYCOLOR="#71b5c9"
 
-# Source common
-source ~/dotfiles/zshrc
+#SYMDIRS[/Volumes/Data/Drive]='/Users/matthew/Drive'
 
 ## User definitions ##
 ```
