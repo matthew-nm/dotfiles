@@ -27,10 +27,10 @@ map('n', 'J', '<C-e>')
 
 map('i', 'jj', '<ESC>') -- jj to exit insert mode
 
-map('n', ';;', 'A;<ESC>') -- ;; to append ; to line
-map('i', ';;', '<ESC>A;<ESC>') -- ;; to append ; to line
-map('n', ',,', 'A,<ESC>') -- ,, to append , to line
-map('i', ',,', '<ESC>A,<ESC>') -- ,, to append , to line
+map('n', '<A-;>', 'A;<ESC>') -- append ; to line
+map('i', ';;', '<ESC>A;<ESC>') -- append ; to line
+map('n', '<A-,>', 'A,<ESC>') -- append , to line
+map('i', ',,', '<ESC>A,<ESC>') -- append , to line
 
 map('n', '<Leader>v', ':vsplit<CR>')  -- vertical split
 map('n', '<Leader>V', ':split<CR>')  -- horizontal split
