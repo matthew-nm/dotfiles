@@ -1,3 +1,5 @@
+require('colors')
+
 require('lualine').setup({
   options = {
     disabled_filetypes = {
@@ -18,7 +20,15 @@ require('lualine').setup({
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_b = {
+      'branch',
+      {'diff', diff_color = {
+        added = {fg=Colors.gitAdd},
+        modified = {fg=Colors.gitChange},
+        removed = {fg=Colors.gitDelete},
+      }},
+      'diagnostics',
+    },
     lualine_c = {'filename'},
     lualine_x = {'lsp_progress', 'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
