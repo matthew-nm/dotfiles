@@ -59,6 +59,14 @@ Map('n', 'La', ':lua vim.lsp.buf.code_action()<CR>') -- code actions
 Map('n', 'Lr', ':lua vim.lsp.buf.rename()<CR>') -- rename throughout project
 Map('n', 'Lf', ':lua vim.lsp.buf.format({async = true})<CR>') -- format code
 
+-- Vim-Test
+Map('n', '<C-t>', ':TestNearest<CR>')
+Map('n', 'Tt', ':TestNearest<CR>')
+Map('n', 'Ts', ':TestFile<CR>')
+Map('n', 'Ta', ':TestSuite<CR>')
+Map('n', 'Tl', ':TestLast<CR>')
+Map('n', 'Tg', ':TestVisit<CR>')
+
 -- Neotree
 Map('n', '<Leader>e', ':Neotree left toggle<CR>', {silent=true}) -- toggle file explorer
 Map('n', '<Leader>E', ':Neotree left<CR>', {silent=true}) -- open/move to file explorer

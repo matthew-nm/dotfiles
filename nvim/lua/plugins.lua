@@ -30,6 +30,9 @@ local plugins = {
   {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'}, -- syntax engine
   {'HiPhish/rainbow-delimiters.nvim'}, -- colorize ({[]})
 
+  -- Testing
+  {'vim-test/vim-test'}, -- testing engine
+
   -- Navigation
   {'alexghergh/nvim-tmux-navigation'}, -- keyboard nav, nvim + tmux
   {'nvim-neo-tree/neo-tree.nvim', -- file explorer
