@@ -43,6 +43,8 @@ alias drp='dart run --observe --enable-asserts'
 alias fb='dart run build_runner watch -d'
 function fr() {flutter run --pid-file "/tmp/flutter-$1.pid"}
 alias far='bash ~/dotfiles/scripts/flutter/hotreload.sh'
+alias ft='flutter test'
+alias fti='flutter test integration_test'
 
 # Android Studio
 alias avdl='~/Library/Android/sdk/tools/emulator -list-avds'
