@@ -26,3 +26,12 @@ function! SynGroup()
     echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
 endfun
 ]])
+
+-- Set numbers
+vim.cmd([[
+command! Nums :call SetNumbers()
+function! SetNumbers()
+  set number
+  set relativenumber
+endfun
+]])
