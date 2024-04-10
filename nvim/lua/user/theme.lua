@@ -10,7 +10,7 @@ require("tokyonight").setup({
 
 -- Editor
 vim.cmd[[colorscheme tokyonight-moon]]
-vim.api.nvim_set_hl(0, 'ExtraWhitespace', {fg='#991111'})
+vim.api.nvim_set_hl(0, 'ExtraWhitespace', {bg='#991111'})
 vim.api.nvim_set_hl(0, 'Todo', {bold=true})
 
 -- Statusline

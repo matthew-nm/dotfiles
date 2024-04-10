@@ -50,7 +50,7 @@ local plugins = {
 
   -- Languages
   --- Flutter / Dart
-  {
+  { -- tools for Flutter
     'akinsho/flutter-tools.nvim',
     lazy = false,
     dependencies = {
@@ -59,7 +59,7 @@ local plugins = {
     },
     config = true,
   },
-  {'f-person/pubspec-assist-nvim'},
+  {'f-person/pubspec-assist-nvim'}, -- dependency assistant
 
   -- Editor
   {'tpope/vim-fugitive'}, -- git commands
