@@ -36,12 +36,23 @@ vim.diagnostic.config({
 	virtual_text = false,
 })
 
+-- add border to lspconfig windows
+require('lspconfig.ui.windows').default_options.border = 'rounded'
+
 
 ----- Configure Mason -----
 require('mason').setup({
   ui = {
     border = 'single',
   }
+})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = {
+    function(server_name)
+      require('lspconfig')[server_name].setup({})
+    end,
+  },
 })
 
 
