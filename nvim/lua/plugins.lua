@@ -51,19 +51,6 @@ local plugins = {
     }
   },
 
-  -- Languages
-  --- Flutter / Dart
-  { -- tools for Flutter
-    'akinsho/flutter-tools.nvim',
-    lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'stevearc/dressing.nvim',
-    },
-    config = true,
-  },
-  {'f-person/pubspec-assist-nvim'}, -- dependency assistant
-
   -- Editor
   {'tpope/vim-fugitive'}, -- git commands
   {'lewis6991/gitsigns.nvim'}, -- show git status in signcolumn
@@ -82,6 +69,23 @@ local plugins = {
   },
   {'rmagatti/goto-preview'}, -- preview LSP actions in floating windows
   {'stevearc/resession.nvim'}, -- save/load sessions
+  { -- numbers as text objects
+    'tkhren/vim-textobj-numeral',
+    dependencies = { 'kana/vim-textobj-user' },
+  },
+
+  -- Language tools
+  --- Flutter / Dart
+  {
+    'akinsho/flutter-tools.nvim', -- tools for Flutter
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim',
+    },
+    config = true,
+  },
+  {'f-person/pubspec-assist-nvim'}, -- dependency assistant
 
   -- Snippets
   {'rafamadriz/friendly-snippets'}, -- multi-language snippets
