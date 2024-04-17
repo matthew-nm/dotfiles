@@ -8,7 +8,7 @@ function mcd() {mkdir -p "$@" && cd "$1"}
 
 alias ld='eza -lDg --icons' # list dirs
 alias lf='eza -lfg --icons --color=always | grep -v /' # list files
-alias lh='eza -dlg . --icons* --group-directories-first' # list hidden
+alias lh='eza -dlg . --icons --group-directories-first' # list hidden
 alias la='eza -alg --icons --group-directories-first' # list all, dirs first
 alias l='eza -lg --icons --group-directories-first' # list, dirs first
 alias ls='eza -alfg --icons --color=always --sort=size | grep -v /' # list by size
