@@ -13,8 +13,8 @@ alias la='eza -alg --icons --group-directories-first' # list all, dirs first
 alias l='eza -lg --icons --group-directories-first' # list, dirs first
 alias ls='eza -alfg --icons --color=always --sort=size | grep -v /' # list by size
 alias ltm='eza -alg --icons --sort=modified' # list by time
-alias lt='eza --tree --icons' # list as tree
-alias ltl='eza -l --tree --icons' # list as tree
+alias lt='eza --tree --icons --group-directories-first' # list as tree
+alias ltl='eza -l --tree --icons --group-directories-first' # list as tree
 alias lg='eza -alg --icons --group-directories-first --git' # list w/ git status
 
 function proc() {ps aux | grep $1 --color=always | grep -v "grep.\+$1"}
