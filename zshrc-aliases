@@ -44,6 +44,7 @@ alias fb='dart run build_runner watch -d'
 function fr() {flutter run --pid-file "/tmp/flutter-$1.pid"}
 alias far='bash ~/dotfiles/scripts/flutter/hotreload.sh'
 alias ft='flutter test'
+alias ftw='bash ~/dotfiles/scripts/flutter/testwatch.sh'
 alias fti='flutter test integration_test'
 
 # Android Studio
