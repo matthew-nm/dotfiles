@@ -25,6 +25,9 @@ Map('n', 'j', 'gj')
 Map('n', 'K', '<C-y>') -- move screen
 Map('n', 'J', '<C-e>')
 
+Map('n', '<C-w>V', '<C-w>H') -- change vertical splits to horizontal
+Map('n', '<C-w>H', '<C-w>K') -- change horizontal splits to vertical
+
 Map('i', 'jj', '<ESC>') -- jj to exit insert mode
 
 Map('n', '<A-;>', 'A;<ESC>') -- append ; to line
