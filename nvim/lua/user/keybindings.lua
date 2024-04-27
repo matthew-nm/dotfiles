@@ -57,7 +57,7 @@ Map('n', '<A-/>', ':Telescope keymaps<CR>')  -- View all keybindings
 ----- Tools -----
 
 -- LSP
-Map('n', 'K', ':lua vim.lsp.buf.hover()<CR>') -- show definition preview
+Map('n', 'LK', ':lua vim.lsp.buf.hover()<CR>') -- show definition preview
 Map('n', 'La', ':lua vim.lsp.buf.code_action()<CR>') -- code actions
 Map('n', 'Lr', ':lua vim.lsp.buf.rename()<CR>') -- rename throughout project
 Map('n', 'Lf', ':lua vim.lsp.buf.format({async = true})<CR>') -- format code
