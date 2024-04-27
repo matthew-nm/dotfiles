@@ -19,7 +19,19 @@
   },
   "Test following the Arrange-Act-Assert pattern": {
     "prefix": "aaa_test",
-    "body": ["test(", "  \"$1\",", "  () async {", "    $2", "  },", ");"],
+    "body": [
+      "test(",
+      "  \"$1\",",
+      "  () async {",
+      "    \/\/ arrange",
+      "    $2",
+      "    \/\/ act",
+      "    ",
+      "    \/\/ assert",
+      "    ",
+      "  },",
+      ");"
+    ],
     "description": "Test following the Arrange-Act-Assert pattern"
   }
 }
