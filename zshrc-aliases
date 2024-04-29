@@ -6,16 +6,16 @@ function fo() {eval "$@" $(fzf --preview 'bat --style=numbers --color=always --l
 alias tmp='cd ~/tmp'
 function mcd() {mkdir -p "$@" && cd "$1"}
 
-alias ld='eza -lDg --icons' # list dirs
-alias lf='eza -lfg --icons --color=always | grep -v /' # list files
-alias lh='eza -dlg . --icons --group-directories-first' # list hidden
-alias la='eza -alg --icons --group-directories-first' # list all, dirs first
-alias l='eza -lg --icons --group-directories-first' # list, dirs first
-alias ls='eza -alfg --icons --color=always --sort=size | grep -v /' # list by size
-alias ltm='eza -alg --icons --sort=modified' # list by time
+alias ld='eza -lD --smart-group --icons' # list dirs
+alias lf='eza -lf --smart-group --icons --color=always | grep -v /' # list files
+alias lh='eza -dl --smart-group . --icons --group-directories-first' # list hidden
+alias la='eza -al --smart-group --icons --group-directories-first' # list all, dirs first
+alias l='eza -l --smart-group --icons --group-directories-first' # list, dirs first
+alias ls='eza -alf --smart-group --icons --color=always --sort=size | grep -v /' # list by size
+alias ltm='eza -al --smart-group --icons --sort=modified' # list by time
 alias lt='eza --tree --icons --group-directories-first' # list as tree
 alias ltl='eza -l --tree --icons --group-directories-first' # list as tree
-alias lg='eza -alg --icons --group-directories-first --git' # list w/ git status
+alias lg='eza -al --smart-group --icons --group-directories-first --git' # list w/ git status
 
 function proc() {ps aux | grep $1 --color=always | grep -v "grep.\+$1"}
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
