@@ -38,8 +38,13 @@ alias lzy='lazygit'
 alias dgo='python manage.py'
 
 # Dart / Flutter
+alias dart='fvm dart'
+alias dv='dart --version'
 alias dr='dart run --observe --enable-asserts --no-pause-isolates-on-exit'
 alias drp='dart run --observe --enable-asserts'
+
+alias flutter='fvm flutter'
+alias fv='flutter --version'
 alias fb='dart run build_runner watch -d'
 function fr() {flutter run --pid-file "/tmp/flutter-$1.pid"}
 alias far='bash ~/dotfiles/scripts/flutter/hotreload.sh'
