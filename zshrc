@@ -7,6 +7,7 @@ export EDITOR='vi'
 export PATH="$HOME"/dotfiles/scripts:"$PATH"
 export PATH="$HOME"/bin:"$PATH"
 export PATH="$HOME"/.local/bin:"$PATH"
+export PATH="$HOME"/.pub-cache/bin:"$PATH"
 export PATH=/opt/homebrew/bin:"$PATH"
 
 
