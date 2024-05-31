@@ -16,6 +16,7 @@ Map('n', '<Leader>Q', ':qa!<CR>') -- quit all, force
 
 Map('n', '<Leader>h', ':hide<CR>') -- hide buffer
 Map('n', '<Leader>d', ':bw<CR>') -- delete buffer
+Map('n', '<Leader>D', ':bw!<CR>') -- delete buffer, force
 Map('n', '<Leader>ch', ':call DeleteHiddenBuffers()<CR>') -- delete hidden buffers
 Map('n', '<Leader>ct', ':windo bd<CR>') -- delete all buffers in tab
 Map('n', '<Leader>ca', ':%bd<CR>', {silent=true}) -- delete all buffers
