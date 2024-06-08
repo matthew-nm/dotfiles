@@ -9,7 +9,10 @@ Map('n', 'Ld', ':PubspecAssistAddDependency ') -- add regular dependency
 Map('n', 'LD', ':PubspecAssistAddDevDependency ') -- add dev dependency
 
 -- Autocommands
+local agId = vim.api.nvim_create_augroup('dart', {})
+
 vim.api.nvim_create_autocmd('InsertLeave', {
+  group = agId,
   pattern = {'*.dart'},
   callback = function()
     vim.lsp.buf.format()
