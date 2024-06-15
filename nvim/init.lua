@@ -7,4 +7,5 @@ vim.g.loaded_netrwPlugin = 1
 -- load
 require 'plugins'
 require 'configs'
+require 'handlers'
 require 'main'

@@ -58,6 +58,7 @@ local plugins = {
   {'liuchengxu/vista.vim'}, -- view code structure in a sidebar
   {'numToStr/Comment.nvim'}, -- easily comment lines of code
   {'kylechui/nvim-surround'}, -- easily surround text
+  {'rcarriga/nvim-notify'},
   {'cohama/lexima.vim'}, -- automatically pair ([{' etc.
   {'gabrielpoca/replacer.nvim'}, -- edit quickfix and save changes
   {'norcalli/nvim-colorizer.lua'}, -- colorize color codes
