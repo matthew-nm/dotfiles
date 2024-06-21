@@ -32,9 +32,9 @@ Map('n', '<C-w>H', '<C-w>K') -- change horizontal splits to vertical
 Map('i', 'jj', '<ESC>') -- jj to exit insert mode
 
 Map('n', '<A-;>', 'A;<ESC>') -- append ; to line
-Map('i', ';;', '<ESC>A;<ESC>') -- append ; to line
+Map('i', ';;', '<END>;') -- append ; to line
 Map('n', '<A-,>', 'A,<ESC>') -- append , to line
-Map('i', ',,', '<ESC>A,<ESC>') -- append , to line
+Map('i', ',,', '<END>,') -- append ; to line
 
 Map('n', '<Leader>v', ':vsplit<CR>')  -- vertical split
 Map('n', '<Leader>V', ':split<CR>')  -- horizontal split
