@@ -2,13 +2,12 @@
 local lsp = require('lsp-zero')
 
 lsp.on_attach(function(_, bufnr)
-
   -- map default keys
-  lsp.default_keymaps({buffer = bufnr})
+  lsp.default_keymaps({ buffer = bufnr })
 
   -- map Telescope keys
-  vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', {buffer = bufnr})
-  vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = bufnr})
+  vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', { buffer = bufnr })
+  vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', { buffer = bufnr })
 
   -- show code hints in floating window on hover
   vim.api.nvim_create_autocmd('CursorHold', {
@@ -25,7 +24,6 @@ lsp.on_attach(function(_, bufnr)
       vim.diagnostic.open_float(nil, opts)
     end
   })
-
 end)
 
 lsp.setup()
@@ -33,7 +31,7 @@ lsp.setup()
 
 -- hide inline code hints
 vim.diagnostic.config({
-	virtual_text = false,
+  virtual_text = false,
 })
 
 -- add border to lspconfig windows
