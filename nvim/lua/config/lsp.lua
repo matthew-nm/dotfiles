@@ -45,20 +45,35 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
-
 ----- Configure Mason -----
 require('mason').setup({
   ui = {
     border = 'single',
-  }
+  },
+  ensure_installed = {
+    'bashls',
+    'lua_ls',
+    'r_language_server',
+    'pyright',
+    'black',
+  },
 })
 require('mason-lspconfig').setup({
-  ensure_installed = {},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
     end,
   },
+})
+
+
+----- Configure Formatter -----
+require("formatter").setup({
+  filetype = {
+    python = {
+      require("formatter.filetypes.python").black
+    }
+  }
 })
 
 
