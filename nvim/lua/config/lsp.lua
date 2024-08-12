@@ -39,6 +39,14 @@ vim.diagnostic.config({
 -- add border to lspconfig windows
 require('lspconfig.ui.windows').default_options.border = 'rounded'
 
+-- add border to lsp floating windows
+local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+  opts = opts or {}
+  opts.border = 'rounded'
+  return orig_util_open_floating_preview(contents, syntax, opts, ...)
+end
+
 
 ----- Configure Mason -----
 require('mason').setup({
