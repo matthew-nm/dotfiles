@@ -1,4 +1,5 @@
 require('colors')
+require('lsp-progress').setup()
 
 require('lualine').setup({
   options = {
@@ -35,7 +36,9 @@ require('lualine').setup({
     },
     lualine_c = {'filename'},
     lualine_x = {
-      'lsp_progress',
+      function()
+        return require('lsp-progress').progress()
+      end,
       'encoding',
       'fileformat',
       'filetype',

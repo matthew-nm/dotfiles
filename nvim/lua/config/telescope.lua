@@ -1,10 +1,17 @@
-require('telescope').load_extension('fzf') -- enable fzf
-
-require('yanky').setup() -- init yanky
-require('telescope').load_extension('yank_history') -- enable yanky
-
--- configure undo
 require('telescope').setup({
+  defaults = {
+    path_display = {
+      filename_first = {
+        reverse_directories = false,
+      },
+    },
+    preview = {
+      check_mime_type = true,
+      filesize_limit = 8,
+      timeout = 250,
+      treesitter = true,
+    }
+  },
   extensions = {
     undo = {
       side_by_side = true,
@@ -23,16 +30,11 @@ require('telescope').setup({
     },
   }
 })
+
+-- load extensions
+require('telescope').load_extension('fzf')
+
 require('telescope').load_extension('undo')
 
--- configure preview
-require('telescope').setup({
-  defaults = {
-    preview = {
-      check_mime_type = true,
-      filesize_limit = 8,
-      timeout = 250,
-      treesitter = true,
-    }
-  }
-})
+require('yanky').setup()
+require('telescope').load_extension('yank_history')

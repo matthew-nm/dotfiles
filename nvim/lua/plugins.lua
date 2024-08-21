@@ -3,7 +3,7 @@ local plugins = {
   -- Theme
   {'nvim-tree/nvim-web-devicons'}, -- icons, for various
   {'nvim-lualine/lualine.nvim', -- status line
-    dependencies = {'WhoIsSethDaniel/lualine-lsp-progress.nvim'}
+    dependencies = {'linrongbin16/lsp-progress.nvim'}
   },
   {'mhartington/oceanic-next'}, -- editor theme
   {'folke/tokyonight.nvim'}, -- editor theme
@@ -42,8 +42,7 @@ local plugins = {
     dependencies = {'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim'}
   },
   {'nvim-telescope/telescope.nvim', -- find words/files/etc.
-    -- tag = '0.1.2',
-    branch = '0.1.x',
+    branch = 'master',
     dependencies = {
       'nvim-lua/plenary.nvim',
       'BurntSushi/ripgrep',
@@ -76,6 +75,7 @@ local plugins = {
     'tkhren/vim-textobj-numeral',
     dependencies = { 'kana/vim-textobj-user' },
   },
+  {'stevearc/dressing.nvim'}, -- nicer user inputs
 
   -- Language tools
   --- Flutter / Dart
