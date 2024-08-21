@@ -13,6 +13,13 @@ lsp.on_attach(function(_, bufnr)
   vim.api.nvim_create_autocmd('CursorHold', {
     buffer = bufnr,
     callback = function()
+      -- return if floating window already open
+      for _, winid in pairs(vim.api.nvim_tabpage_list_wins(0)) do
+        if vim.api.nvim_win_get_config(winid).zindex then
+          return
+        end
+      end
+      -- open floating diagnostic
       local opts = {
         focusable = false,
         close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
