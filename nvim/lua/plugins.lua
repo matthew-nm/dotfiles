@@ -78,6 +78,7 @@ local plugins = {
     dependencies = { 'kana/vim-textobj-user' },
   },
   {'stevearc/dressing.nvim'}, -- nicer user inputs
+  {'wellle/targets.vim'}, -- improved text objects
 
   -- Language tools
   --- Flutter / Dart
