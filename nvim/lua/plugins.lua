@@ -15,6 +15,8 @@ local plugins = {
       {'neovim/nvim-lspconfig'},
       {'williamboman/mason.nvim', build = ':MasonUpdate'},
       {'williamboman/mason-lspconfig.nvim'},
+      -- {'nvimtools/none-ls.nvim'},
+      -- {'jay-babu/mason-null-ls.nvim'},
       -- autocompletion
       {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-nvim-lsp'},

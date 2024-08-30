@@ -12,6 +12,7 @@ require("tokyonight").setup({
 vim.cmd[[colorscheme tokyonight-moon]]
 vim.api.nvim_set_hl(0, 'ExtraWhitespace', {bg='#991111'})
 vim.api.nvim_set_hl(0, 'Todo', {bold=true})
+vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', {fg = '#7079b5', underline=true})
 
 -- Statusline
 require'lualine'.setup{
@@ -27,3 +28,7 @@ vim.api.nvim_set_hl(0, 'GitSignsDelete', {fg = Colors.gitDelete})
 
 -- Rainbow Delimiters
 vim.api.nvim_set_hl(0, 'RainbowDelimiterGreen', {fg = '#9dc96d'})
+
+-- NeoTree
+vim.api.nvim_set_hl(0, 'NeoTreeTitleBar', {link = 'MsgArea'})
+vim.api.nvim_set_hl(0, 'NeoTreeGitModified', {fg = Colors.gitChange})

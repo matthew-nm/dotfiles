@@ -57,13 +57,6 @@ require('mason').setup({
   ui = {
     border = 'single',
   },
-  ensure_installed = {
-    'bashls',
-    'lua_ls',
-    'r_language_server',
-    'pyright',
-    'black',
-  },
 })
 require('mason-lspconfig').setup({
   handlers = {
@@ -71,7 +64,19 @@ require('mason-lspconfig').setup({
       require('lspconfig')[server_name].setup({})
     end,
   },
+  ensure_installed = {
+    'bashls',
+    'lua_ls',
+    'pyright',
+  },
 })
+-- require("mason-null-ls").setup({
+--   ensure_installed = {
+--     'black',
+--   },
+--   automatic_installation = true,
+-- })
+-- require("null-ls").setup({})
 
 
 ----- Configure Formatter -----
