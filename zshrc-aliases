@@ -46,6 +46,7 @@ alias flutter='fvm flutter'
 alias fv='flutter --version'
 alias fb='dart run build_runner watch -d'
 function fr() {flutter run --pid-file "/tmp/flutter-$1.pid"}
+function frd() {flutter run --pid-file "/tmp/flutter-$1.pid" -d "$2"}
 alias frc='flutter run --pid-file "/tmp/flutter-chrome.pid" -d chrome'
 alias far='bash ~/dotfiles/scripts/flutter/hotreload.sh'
 alias ft='flutter test'
