@@ -64,6 +64,17 @@ require('mason-lspconfig').setup({
     function(server_name)
       require('lspconfig')[server_name].setup({})
     end,
+    ['lua_ls'] = function()
+      require('lspconfig').lua_ls.setup({
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = {'vim'}
+            }
+          }
+        }
+      })
+    end,
     ['omnisharp'] = function()
       require('netcoredbg-macOS-arm64').setup(require('dap'))
       require("csharp").setup()
@@ -76,13 +87,6 @@ require('mason-lspconfig').setup({
     'omnisharp',
   },
 })
--- require("mason-null-ls").setup({
---   ensure_installed = {
---     'black',
---   },
---   automatic_installation = true,
--- })
--- require("null-ls").setup({})
 
 
 ----- Configure Formatter -----

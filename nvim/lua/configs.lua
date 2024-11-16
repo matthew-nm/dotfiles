@@ -3,7 +3,6 @@ require 'config.lualine'
 
 -- LSP
 require 'config.lsp'
-require 'config.lsp-lua'
 require 'config.lsp-flutter'
 require 'config.goto-preview'
 
