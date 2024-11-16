@@ -52,6 +52,7 @@ function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
   return orig_util_open_floating_preview(contents, syntax, opts, ...)
 end
 
+
 ----- Configure Mason -----
 require('mason').setup({
   ui = {
@@ -63,11 +64,16 @@ require('mason-lspconfig').setup({
     function(server_name)
       require('lspconfig')[server_name].setup({})
     end,
+    ['omnisharp'] = function()
+      require('netcoredbg-macOS-arm64').setup(require('dap'))
+      require("csharp").setup()
+    end,
   },
   ensure_installed = {
     'bashls',
     'lua_ls',
     'pyright',
+    'omnisharp',
   },
 })
 -- require("mason-null-ls").setup({
@@ -84,7 +90,10 @@ require("formatter").setup({
   filetype = {
     python = {
       require("formatter.filetypes.python").black
-    }
+    },
+    cs = {
+      require("formatter.filetypes.cs").csharpier
+    },
   }
 })
 

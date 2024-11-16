@@ -92,9 +92,19 @@ local plugins = {
     config = true,
   },
   {'f-person/pubspec-assist-nvim'}, -- dependency assistant
+  --- C#
+  {
+    "iabdelkareem/csharp.nvim",
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "Tastyep/structlog.nvim",
+      "Cliffback/netcoredbg-macOS-arm64.nvim",
+    },
+  },
 
   -- Snippets
   {'rafamadriz/friendly-snippets'}, -- multi-language snippets
+  {'J0rgeSerran0/vscode-csharp-snippets'}, -- C#, general
   {'Nash0x7E2/awesome-flutter-snippets'}, -- Flutter, general
   {'ArkrootHQ/freezed-snippets'}, -- Flutter, `freezed` package
   {'RobertBrunhage/flutter-riverpod-snippets'}, -- Flutter, `riverpod` package
