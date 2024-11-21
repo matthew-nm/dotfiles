@@ -1,6 +1,6 @@
 vim.o.tabstop = 4
 
-Map('n', 'Lf', ':silent! Format<CR>')
+Map('n', 'Lf', ':silent! Format<CR>', {buffer=true})
 
 -- Autocommands
 local agId = vim.api.nvim_create_augroup('cs', {})
