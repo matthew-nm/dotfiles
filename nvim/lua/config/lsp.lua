@@ -82,9 +82,13 @@ require('mason-lspconfig').setup({
   },
   ensure_installed = {
     'bashls',
+    'cssls',
+    'htmx',
     'lua_ls',
+    'omnisharp', -- c#
     'pyright',
-    'omnisharp',
+    -- 'superhtml',
+    'ts_ls', -- typescript, javascript
   },
 })
 
