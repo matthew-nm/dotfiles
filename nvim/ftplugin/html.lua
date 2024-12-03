@@ -1,4 +1,4 @@
-vim.o.tabstop = 4;
+vim.opt_local.tabstop = 4
 
 -- Autocommands
 local augroup = vim.api.nvim_create_augroup('html', {})

@@ -1,4 +1,4 @@
-vim.o.tabstop = 4
+vim.opt_local.tabstop = 4
 
 Map('n', 'Lf', ':silent! Format<CR>', {buffer=true})
 

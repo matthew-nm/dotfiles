@@ -1,2 +1,2 @@
-vim.o.linebreak = true
-vim.o.tabstop = 4
+vim.opt_local.linebreak = true
+vim.opt_local.tabstop = 4
