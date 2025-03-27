@@ -27,6 +27,7 @@ alias nv='nvim'
 # Tmux
 alias tp='tmuxp load tmuxp'
 alias tk='tmux kill-session -t'
+alias tds='ts ${PWD##*/}'
 
 # Git
 alias git='git '
