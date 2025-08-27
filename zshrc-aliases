@@ -34,8 +34,17 @@ alias git='git '
 alias logg='log --graph --decorate --all'
 alias lzy='lazygit'
 
-# Python / Django
-alias dgo='python manage.py'
+# GitHub CLI
+function ghn() {gh repo create "$1" --private --source=. --remote=origin} # GitHub new repo from here
+function ghnp() {gh repo create "$1" --private --source=. --remote=origin --push} # GitHub new repo from here + push
+
+# Python
+alias activate='source .venv/bin/activate'
+alias uvr='uv run'
+alias mcpi='npx @modelcontextprotocol/inspector'
+alias mcpd='mcp dev'
+alias mcpr='mcp run'
+alias dgo='python manage.py' # Django
 
 # Dart / Flutter
 alias dart='fvm dart'
