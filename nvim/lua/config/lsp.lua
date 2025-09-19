@@ -102,6 +102,9 @@ require("formatter").setup({
     cs = {
       require("formatter.filetypes.cs").csharpier
     },
+    markdown = {
+      require("formatter.filetypes.markdown").prettierd
+    },
   }
 })
 
