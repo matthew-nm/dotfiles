@@ -13,6 +13,7 @@ require('nvim-surround').setup({
 		['i'] = ']', -- Index
 		['r'] = ')', -- Round
 		['b'] = '}', -- Brackets
+		['t'] = '"""', -- Triple quotes
 	},
-	move_cursor = false,
+	move_cursor = true,
 })

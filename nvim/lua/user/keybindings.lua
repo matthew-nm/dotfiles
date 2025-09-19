@@ -35,7 +35,8 @@ Map('i', 'jj', '<ESC>') -- jj to exit insert mode
 Map('n', '<A-;>', 'A;<ESC>') -- append ; to line
 Map('i', ';;', '<END>;<ESC>') -- append ; to line
 Map('n', '<A-,>', 'A,<ESC>') -- append , to line
-Map('i', ',,', '<END>,<ESC>') -- append ; to line
+Map('i', ',,', '<END>,<ESC>') -- append , to line
+Map('n', '<A-.>', 'A.<ESC>') -- append . to line
 
 Map('n', '<Leader>v', ':vsplit<CR>')  -- vertical split
 Map('n', '<Leader>V', ':split<CR>')  -- horizontal split

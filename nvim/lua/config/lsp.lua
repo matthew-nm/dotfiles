@@ -80,6 +80,8 @@ require('mason-lspconfig').setup({
       require("csharp").setup()
     end,
   },
+  automatic_enable = true,
+  automatic_installation = true,
   ensure_installed = {
     'bashls',
     'cssls',
@@ -87,6 +89,7 @@ require('mason-lspconfig').setup({
     'lua_ls',
     'omnisharp', -- c#
     'pyright',
+    'ruff',
     -- 'superhtml',
     'ts_ls', -- typescript, javascript
   },
@@ -97,7 +100,7 @@ require('mason-lspconfig').setup({
 require("formatter").setup({
   filetype = {
     python = {
-      require("formatter.filetypes.python").black
+      require("formatter.filetypes.python").ruff
     },
     cs = {
       require("formatter.filetypes.cs").csharpier
