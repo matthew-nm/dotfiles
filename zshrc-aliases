@@ -41,6 +41,7 @@ function ghnp() {gh repo create "$1" --private --source=. --remote=origin --push
 # Python
 alias activate='source .venv/bin/activate'
 alias uvr='uv run'
+alias uvi='uv run python -i'
 alias mcpi='npx @modelcontextprotocol/inspector'
 alias mcpd='mcp dev'
 alias mcpr='mcp run'
