@@ -1,4 +1,4 @@
-require 'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter'.setup {
   highlight = {
     enable = true,
   },
@@ -6,6 +6,14 @@ require 'nvim-treesitter.configs'.setup {
     enable = true,
     -- disable = {'dart'}
   },
+}
+
+require 'nvim-treesitter'.install {
+  'csharp',
+  'python',
+  'javascript',
+  'html',
+  'lua',
 }
 
 -- (https://github.com/nvim-treesitter/nvim-treesitter/issues/4945)

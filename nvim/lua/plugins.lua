@@ -29,7 +29,12 @@ local plugins = {
   },
 
   -- Treesitter
-  {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'}, -- syntax engine
+  { -- syntax engine
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    branch = 'main',
+    build = ':TSUpdate'
+  },
   {'HiPhish/rainbow-delimiters.nvim'}, -- colorize ({[]})
 
   -- Testing

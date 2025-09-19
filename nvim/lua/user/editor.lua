@@ -13,8 +13,11 @@ vim.o.tabstop = 2 -- number of columns on tab insert
 vim.o.shiftwidth = 0 -- 0 uses tabstop value
 
 vim.o.foldmethod = 'expr' -- fold via user-defined expression
-vim.o.foldexpr = 'nvim_treesitter#foldexpr()' -- define fold expression
+-- vim.o.foldexpr = 'v:lua.vim.lsp.foldexpr()' -- define fold expression
+vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()' -- define fold expression
+-- vim.o.foldtext = 'v:lua.vim.treesitter.foldtext()' -- define fold display
 vim.o.foldlevelstart = 99
+vim.o.foldlevel = 99
 
 vim.api.nvim_create_autocmd( -- improve upon autoread (autoread must be enabled, is by default)
 { "BufEnter", "CursorHold", "CursorHoldI", "FocusGained" }, {
