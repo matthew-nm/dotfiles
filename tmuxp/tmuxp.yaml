@@ -3,7 +3,6 @@ windows:
   - window_name: Git
     panes:
     - shell_command:
-      - tmux setenv TMUX_PWD $PWD
       - tmux rename-session ${PWD##*/}
       - clear
       - lazygit

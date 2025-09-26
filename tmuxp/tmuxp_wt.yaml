@@ -1,0 +1,13 @@
+session_name: project
+windows:
+  - window_name: Git
+    panes:
+    - shell_command:
+      - tmux rename-session "${$(dirname $PWD)##*/}"
+      - clear
+      - lazygit
+  - window_name: Edit
+    panes:
+    - shell_command:
+      - nvim
+  - window_name: Run

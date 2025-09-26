@@ -26,6 +26,7 @@ alias nv='nvim'
 
 # Tmux
 alias tp='tmuxp load tmuxp'
+alias tpw='tmuxp load tmuxp_wt'
 alias tk='tmux kill-session -t'
 alias tds='ts ${PWD##*/}'
 
