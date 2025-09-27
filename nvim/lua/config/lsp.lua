@@ -88,7 +88,8 @@ require('mason-lspconfig').setup({
     'htmx',
     'lua_ls',
     'omnisharp', -- c#
-    'pyright',
+    -- 'pyright',
+    'basedpyright',
     'ruff',
     -- 'superhtml',
     'ts_ls', -- typescript, javascript

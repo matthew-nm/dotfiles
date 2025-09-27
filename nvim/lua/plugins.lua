@@ -10,7 +10,6 @@ local plugins = {
 
   -- LSP
   {'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
     dependencies = {
       {'neovim/nvim-lspconfig'},
       {'williamboman/mason.nvim', build = ':MasonUpdate'},
@@ -23,7 +22,7 @@ local plugins = {
       {'hrsh7th/cmp-path'},
       {'L3MON4D3/LuaSnip'},
       {'saadparwaiz1/cmp_luasnip'},
-      -- configuration
+      -- formatting
       {'mhartington/formatter.nvim'},
     }
   },
@@ -36,6 +35,11 @@ local plugins = {
     build = ':TSUpdate'
   },
   {'HiPhish/rainbow-delimiters.nvim'}, -- colorize ({[]})
+  { -- view line indents
+    'lukas-reineke/indent-blankline.nvim',
+    main = 'ibl',
+    opts = {},
+  },
 
   -- Testing
   {'vim-test/vim-test'}, -- testing engine
@@ -53,7 +57,7 @@ local plugins = {
       'BurntSushi/ripgrep',
       {'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
       'gbprod/yanky.nvim',
-      'debugloop/telescope-undo.nvim'
+      'debugloop/telescope-undo.nvim',
     }
   },
 
@@ -69,7 +73,6 @@ local plugins = {
   {'gabrielpoca/replacer.nvim'}, -- edit quickfix and save changes
   {'norcalli/nvim-colorizer.lua'}, -- colorize color codes
   {'ntpeters/vim-better-whitespace'}, -- highlight whitespace and end of lines
-  {'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {}}, -- view line indents
   { -- highlight and jump to todo, fixme, etc.
     'folke/todo-comments.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
@@ -82,6 +85,10 @@ local plugins = {
   },
   {'stevearc/dressing.nvim'}, -- nicer user inputs
   {'wellle/targets.vim'}, -- improved text objects
+  {
+    "afonsofrancof/worktrees.nvim",
+    event = "VeryLazy",
+  },
 
   -- Language tools
   --- Flutter / Dart

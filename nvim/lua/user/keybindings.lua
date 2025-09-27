@@ -59,6 +59,11 @@ Map('n', '<A-/>', ':Telescope keymaps<CR>')  -- View all keybindings
 
 ----- Tools -----
 
+-- Worktrees
+Map('n', 'Ws', ':WorktreeSwitch<CR>')
+Map('n', 'Wc', ':WorktreeCreate<CR>')
+Map('n', 'Wd', ':WorktreeDelete<CR>')
+
 -- LSP
 Map('n', 'LK', ':lua vim.lsp.buf.hover()<CR>') -- show definition preview
 Map('n', 'La', ':lua vim.lsp.buf.code_action()<CR>') -- code actions
