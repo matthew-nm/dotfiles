@@ -1,6 +1,6 @@
 # ----- USER ----- #
 
-export MYCOLOR="${MYCOLOR:-#6cd2d4}"
+export MYCOLOR="${MYCOLOR:-#c65038}"
 
 export EDITOR='vi'
 

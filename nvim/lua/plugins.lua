@@ -5,8 +5,12 @@ local plugins = {
   {'nvim-lualine/lualine.nvim', -- status line
     dependencies = {'linrongbin16/lsp-progress.nvim'}
   },
-  {'mhartington/oceanic-next'}, -- editor theme
-  {'folke/tokyonight.nvim'}, -- editor theme
+  -- {'mhartington/oceanic-next'}, -- editor theme
+  -- {'folke/tokyonight.nvim'}, -- editor theme
+  -- {'fcpg/vim-farout'}, -- editor theme
+  -- {'rafamadriz/neon'}, -- editor theme
+  -- {'gabfelix/mudworld'}, -- editor theme
+  {'morhetz/gruvbox'}, -- editor theme
 
   -- LSP
   {'VonHeikemen/lsp-zero.nvim',

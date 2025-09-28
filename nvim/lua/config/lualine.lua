@@ -39,18 +39,18 @@ require('lualine').setup({
       function()
         return require('lsp-progress').progress()
       end,
-      'encoding',
-      'fileformat',
+      -- 'encoding',
+      -- 'fileformat',
       'filetype',
     },
-    lualine_y = {'progress'},
-    lualine_z = {'location'}
+    lualine_y = {},
+    lualine_z = {'progress'}
   },
   inactive_sections = {
     lualine_a = {},
-    lualine_b = {},
+    lualine_b = {'branch'},
     lualine_c = {'filename'},
-    lualine_x = {'location'},
+    lualine_x = {'filetype'},
     lualine_y = {},
     lualine_z = {}
   },
