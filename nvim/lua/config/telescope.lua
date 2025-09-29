@@ -1,4 +1,12 @@
-require('telescope').setup({
+local telescope = require("telescope")
+local telescopeConfig = require("telescope.config")
+local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
+
+table.insert(vimgrep_arguments, "--hidden")
+table.insert(vimgrep_arguments, "--glob")
+table.insert(vimgrep_arguments, "!**/.git/*")
+
+telescope.setup({
   defaults = {
     path_display = {
       filename_first = {
@@ -10,7 +18,13 @@ require('telescope').setup({
       filesize_limit = 8,
       timeout = 250,
       treesitter = true,
-    }
+    },
+    vimgrep_arguments = vimgrep_arguments,
+  },
+  pickers = {
+    find_files = {
+      find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+    },
   },
   extensions = {
     undo = {

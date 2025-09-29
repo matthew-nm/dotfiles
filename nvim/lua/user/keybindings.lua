@@ -19,7 +19,7 @@ Map('n', '<Leader>d', ':bw<CR>') -- delete buffer
 Map('n', '<Leader>D', ':bw!<CR>') -- delete buffer, force
 Map('n', '<Leader>ch', ':call DeleteHiddenBuffers()<CR>') -- delete hidden buffers
 Map('n', '<Leader>ct', ':tabclose<CR>') -- close tab
-Map('n', '<Leader>cdt', ':windo bd<CR>') -- close tab and delete buffers
+Map('n', '<Leader>cT', ':windo bd<CR>') -- close tab and delete buffers
 Map('n', '<Leader>ca', ':%bd<CR>', {silent=true}) -- delete all buffers
 
 Map('n', 'k', 'gk') -- move with wrapped lines

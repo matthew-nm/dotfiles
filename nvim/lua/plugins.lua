@@ -87,10 +87,14 @@ local plugins = {
     'tkhren/vim-textobj-numeral',
     dependencies = { 'kana/vim-textobj-user' },
   },
-  {'stevearc/dressing.nvim'}, -- nicer user inputs
+  {'folke/snacks.nvim'}, -- nicer user inputs
   {'wellle/targets.vim'}, -- improved text objects
   {
     "afonsofrancof/worktrees.nvim",
+    event = "VeryLazy",
+  },
+  {
+    "folke/which-key.nvim",
     event = "VeryLazy",
   },
 
