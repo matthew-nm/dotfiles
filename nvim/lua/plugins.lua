@@ -98,6 +98,21 @@ local plugins = {
     event = "VeryLazy",
   },
 
+  -- Debugging
+  {
+    'mfussenegger/nvim-dap',
+    dependencies = {
+      'rcarriga/nvim-dap-ui', -- improved tui
+      'nvim-neotest/nvim-nio', -- nvim-dap-ui dependency
+      'jay-babu/mason-nvim-dap.nvim', -- Mason interface (installer)
+      -- Languages
+      {
+        'mfussenegger/nvim-dap-python',
+        ft = 'python',
+      }
+    },
+  },
+
   -- Language tools
   --- Flutter / Dart
   {

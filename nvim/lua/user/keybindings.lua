@@ -70,6 +70,29 @@ Map('n', 'La', ':lua vim.lsp.buf.code_action()<CR>') -- code actions
 Map('n', 'Lr', ':lua vim.lsp.buf.rename()<CR>') -- rename throughout project
 Map('n', 'Lf', ':lua vim.lsp.buf.format({async = true})<CR>') -- format code
 
+-- DAP Debugger
+local function dapSetConditionalBreakpoint()
+  vim.ui.input(
+    { prompt="Breakpoint condition: " },
+    function(input)
+      require('dap').set_breakpoint(input)
+    end
+  )
+end
+-- dap
+Map('n', '<M-b>', function() require('dap').toggle_breakpoint() end)
+Map('n', '<M-B>', function() dapSetConditionalBreakpoint() end)
+Map('n', '<M-Up>', function() require('dap').step_out() end)
+Map('n', '<M-Down>', function() require('dap').step_into() end)
+Map('n', '<M-Left>', ':DapRestartFrame<CR>')
+Map('n', '<M-Right>', function() require('dap').step_over() end)
+Map('n', '<M-c>', function() require('dap').continue() end)
+Map('n', '<M-d>c', ':DapClearBreakpoints<CR>')
+Map('n', '<M-d>x', ':DapTerminate<CR>')
+Map('n', '<M-r>', ':DapToggleRepl<CR>')
+-- dap-ui
+Map('n', '<M-u>', function() require('dapui').toggle() end)
+
 -- Vim-Test
 Map('n', '<C-t>', ':TestNearest<CR>')
 Map('n', 'Tt', ':TestNearest<CR>')

@@ -59,6 +59,14 @@ require('mason').setup({
     border = 'single',
   },
 })
+
+require('mason-nvim-dap').setup({
+  automatic_installation = true,
+  ensure_installed = {
+    'python',
+  }
+})
+
 require('mason-lspconfig').setup({
   handlers = {
     function(server_name)
