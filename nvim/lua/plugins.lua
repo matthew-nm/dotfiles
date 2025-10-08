@@ -96,6 +96,7 @@ local plugins = {
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
+    opts = { delay = 600 }
   },
 
   -- Debugging

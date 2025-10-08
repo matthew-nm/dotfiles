@@ -60,7 +60,7 @@ Map('n', '<A-/>', ':Telescope keymaps<CR>')  -- View all keybindings
 ----- Tools -----
 
 -- Worktrees
-Map('n', 'Ws', ':WorktreeSwitch<CR>')
+Map('n', 'Ws', function() require('worktrees').switch(false) end)
 Map('n', 'Wc', ':WorktreeCreate<CR>')
 Map('n', 'Wd', ':WorktreeDelete<CR>')
 
