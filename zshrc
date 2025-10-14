@@ -60,21 +60,21 @@ gm=36:"
 # ----- FUNCTIONS ----- #
 
 # fix path issues
-function fix_path_issues() {
-  PATH_UNIQ=$(echo -n $PATH | tr ":" "\n" | awk '!x[$0]++')
-  PATH_SORT="$(grep conda <<<$PATH_UNIQ)\n$(grep -v conda <<<$PATH_UNIQ)"
-  PATH=$(echo $PATH_SORT|tr "\n" ":")
-}
+# function fix_path_issues() {
+#   PATH_UNIQ=$(echo -n $PATH | tr ":" "\n" | awk '!x[$0]++')
+#   PATH_SORT="$(grep conda <<<$PATH_UNIQ)\n$(grep -v conda <<<$PATH_UNIQ)"
+#   PATH=$(echo $PATH_SORT|tr "\n" ":")
+# }
 
 # Execute before showing prompt
-precmd() {
-  # Fix pure prompt conda display
-  if [ "$CONDA_DEFAULT_ENV" = "base" ]; then
-    unset CONDA_DEFAULT_ENV
-  else
-    CONDA_DEFAULT_ENV="$(basename "$CONDA_DEFAULT_ENV")"
-  fi
-}
+# precmd() {
+#   # Fix pure prompt conda display
+#   if [ "$CONDA_DEFAULT_ENV" = "base" ]; then
+#     unset CONDA_DEFAULT_ENV
+#   else
+#     CONDA_DEFAULT_ENV="$(basename "$CONDA_DEFAULT_ENV")"
+#   fi
+# }
 
 
 # ----- PRE-LOAD CONFIG ----- #
@@ -138,4 +138,4 @@ zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}'
 
 # ----- FINAL COMMANDS ----- #
 
-fix_path_issues
+# fix_path_issues
