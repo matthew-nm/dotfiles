@@ -2,27 +2,6 @@
 local lsp = require('lsp-zero')
 
 lsp.on_attach(function(_, bufnr)
-  -- map default keys
-  -- lsp.default_keymaps({ buffer = bufnr })
-  vim.api.nvim_create_autocmd('LspAttach', {
-    desc = 'LSP actions',
-    callback = function(event)
-      local opts = {buffer = event.buf}
-      vim.keymap.set('n', 'LK', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
-      vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-      vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-      -- vim.keymap.set('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
-      vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', opts)
-      vim.keymap.set('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
-      -- vim.keymap.set('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
-      vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', opts)
-      vim.keymap.set('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
-      vim.keymap.set('n', 'Lr', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-      vim.keymap.set({'n', 'x'}, 'Lf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-      vim.keymap.set('n', 'La', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
-    end,
-  })
-
   -- show code hints in floating window on hover
   vim.api.nvim_create_autocmd('CursorHold', {
     buffer = bufnr,

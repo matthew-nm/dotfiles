@@ -59,6 +59,20 @@ Map('n', '<A-/>', ':Telescope keymaps<CR>')  -- View all keybindings
 
 ----- Tools -----
 
+-- LSP
+Map({'n', 'x'}, 'Lf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>')
+Map('n', 'LK', '<cmd>lua vim.lsp.buf.hover()<cr>')
+Map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+Map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+-- Map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+Map('n', 'gi', '<cmd>Telescope lsp_implementations<cr>')
+Map('n', 'go', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+-- Map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
+Map('n', 'gr', '<cmd>Telescope lsp_references<cr>')
+Map('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+Map('n', 'Lr', '<cmd>lua vim.lsp.buf.rename()<cr>')
+Map('n', 'La', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+
 -- Worktrees
 Map('n', 'Ws', function() require('worktrees').switch(false) end)
 Map('n', 'Wc', ':WorktreeCreate<CR>')
