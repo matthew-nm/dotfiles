@@ -6,6 +6,7 @@ vim.g.gruvbox_italic=1
 vim.cmd[[colorscheme gruvbox]]
 
 clr_vimbg = '#0E1B24'
+clr_floatbg = '#101F29'
 clr_neotreebg = '#0D1921'
 clr_cursorlinebg = '#182C38'
 clr_activebg = '#2A4B52'
@@ -16,8 +17,8 @@ vim.api.nvim_set_hl(0, 'SignColumn', {bg=clr_vimbg})
 vim.api.nvim_set_hl(0, 'CursorLine', {bg=clr_cursorlinebg})
 vim.api.nvim_set_hl(0, 'CursorLineNr', {bg=clr_cursorlinebg, fg='#D49653', bold=true})
 vim.api.nvim_set_hl(0, 'WinSeparator', {fg=clr_neotreebg, bg=clr_vimbg})
-vim.api.nvim_set_hl(0, 'NormalFloat', {bg=clr_neotreebg})
-vim.api.nvim_set_hl(0, 'FloatBorder', {bg=clr_neotreebg, fg=clr_activebg})
+vim.api.nvim_set_hl(0, 'NormalFloat', {bg=clr_floatbg})
+vim.api.nvim_set_hl(0, 'FloatBorder', {bg=clr_floatbg, fg=clr_activebg})
 vim.api.nvim_set_hl(0, 'StatusLine', {link='WinSeparator'})
 vim.api.nvim_set_hl(0, 'StatusLineNC', {link='WinSeparator'})
 vim.api.nvim_set_hl(0, 'TabLine', {bg=clr_vimbg, fg='#7c6f64'})
