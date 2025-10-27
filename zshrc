@@ -26,8 +26,6 @@ plugins=(
   copyfile
   copypath
   tmux
-  # zsh-autosuggestions
-  zsh-syntax-highlighting  # keep at end of list to ensure proper coloring
 )
 
 
@@ -95,6 +93,21 @@ COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# Homebrew additions
+if type brew &>/dev/null; then
+  # zsh-completions
+  fpath+=("$(brew --prefix)/share/zsh-completions")
+  autoload -U compinit && compinit
+
+  # pure prompt
+  fpath+=("$(brew --prefix)/share/zsh/site-functions")
+  autoload -U promptinit && promptinit
+  prompt pure
+
+  # syntax highlighting
+  source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
+
 
 # ----- LOAD ----- #
 
@@ -118,11 +131,6 @@ source $ZSH/oh-my-zsh.sh
 
 # aliases
 source "${0:a:h}/zshrc-aliases"
-
-# pure prompt
-fpath+=$HOME/Utilities/pure
-autoload -U promptinit && promptinit
-prompt pure
 
 # fzf keybindings
 eval "$(fzf --zsh)"
