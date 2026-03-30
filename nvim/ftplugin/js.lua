@@ -5,6 +5,6 @@ vim.api.nvim_create_autocmd('InsertLeave', {
   group = augroup,
   pattern = {'*.js'},
   callback = function()
-    vim.lsp.buf.format()
+    vim.lsp.buf.format({async=true})
   end,
 })
