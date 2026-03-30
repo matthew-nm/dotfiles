@@ -17,6 +17,7 @@ alias lz='eza -alf --smart-group --icons --color=always --sort=size | grep -v /'
 alias lm='eza -al --smart-group --icons --sort=modified' # list by time modified
 alias lt='eza --tree --icons --group-directories-first' # list as tree
 alias ltl='eza -l --tree --icons --group-directories-first' # list as tree, verbose
+alias localtunnel='/opt/homebrew/bin/lt'
 
 function proc() {ps aux | grep $1 --color=always | grep -v "grep.\+$1"}
 alias color256='for code ({000..255}) print -P -- "$code: %F{$code}\u2588\u2588\u2588\u2588 These are colors!%f"'
@@ -57,9 +58,11 @@ alias drp='dart run --observe --enable-asserts'
 alias flutter='fvm flutter'
 alias fv='flutter --version'
 alias fb='dart run build_runner watch -d'
-function fr() {flutter run --pid-file "/tmp/flutter-$1.pid"}
-function frd() {flutter run --pid-file "/tmp/flutter-$1.pid" -d "$2"}
-alias frc='flutter run --pid-file "/tmp/flutter-chrome.pid" -d chrome'
+function fr() {flutter run --pid-file "/tmp/flutter-$1.pid" "${@:2}"}
+function frd() {flutter run --pid-file "/tmp/flutter-$1.pid" -d "$2" "${@:3}"}
+function frc() {flutter run --pid-file "/tmp/flutter-chrome.pid" -d chrome "${@}"}
+function fre() {flutter run --pid-file "/tmp/flutter-$1.pid" --dart-define-from-file "$2" "${@:3}"}
+function frce() {flutter run --pid-file "/tmp/flutter-$1.pid" -d chrome --dart-define-from-file "$2" "${@:3}"}
 alias far='bash ~/dotfiles/scripts/flutter/hotreload.sh'
 alias ft='flutter test'
 alias ftw='bash ~/dotfiles/scripts/flutter/testwatch.sh'
